@@ -1,0 +1,22 @@
+.btn {
+    color: #fff;
+    background-color: var(--btn);
+    padding: 14px 40px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    @include ease-02;
+
+    &:hover {
+        background-color: var(--btn_hover);
+    }
+
+    &:active {
+        background-color: var(--btn_hover);
+        transform: scale(0.95);
+    }
+
+    &:disabled {
+        background-color: var(--btn_dis);
+    }
+}

@@ -1,0 +1,30 @@
+.product_slider {
+    position: relative;
+    overflow: visible;
+    padding: 0 20px;
+    .product_slider_wr {
+
+        .product_slide {
+            
+        }
+    }
+
+    .product_nav {
+
+        .product_nav_left {
+            position: absolute;
+            top: calc(50% - 30px);
+            left: 0;
+            z-index: 10;
+            cursor: pointer;
+        }
+
+        .product_nav_right {
+            position: absolute;
+            top: calc(50% - 30px);
+            right: 0;
+            z-index: 10;
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,110 @@
+.prev {
+    padding: 12px 0;
+    overflow: hidden;
+
+
+    &__in {
+        padding: 0 16px;
+        
+        position: relative;
+        &_wr {
+
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 65px;
+        border-radius: 12px;
+
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        &_title {
+            font-weight: 700;
+            color: #fff;
+            font-size: 52px;
+            line-height: 63px;
+            margin-bottom: 8px;
+        }
+
+        &_descr {
+            font-size: 24px;
+            line-height: 28px;
+            color: #fff;
+            margin-bottom: 51px;
+        }
+
+
+        &_btn {
+            
+            a {
+                display: inline-block;
+                padding: 14px 30px;
+                background-color: #fff;
+                font-weight: 500;
+                border-radius: 72px;
+                @include ease-02;
+
+                &:hover {
+                    background-color: var(--text);
+                    color: #fff;
+                }
+
+                &:active {
+                    transform: scale(0.95);
+                }
+            }
+        }
+    }
+
+    &__nav {
+
+        &_left {
+            cursor: pointer;
+            position: absolute;
+            top: calc(50% - 16px);
+            left: -16px;
+            left: 0;
+            z-index: 10;
+        }
+
+        &_right {
+            cursor: pointer;
+            position: absolute;
+            top: calc(50% - 16px);
+            right: -12px;
+            right: 0;
+            z-index: 10;
+        }
+    }
+
+    &__pag {
+        padding-bottom: 10px;
+        &_item {
+            height: 3px;
+            width: 73px;
+            background: #FFFFFF;
+            opacity: 0.5;
+            border-radius: 48px;
+            display: inline-block;
+            margin-right: 22px;
+            cursor: pointer;
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+
+        &_item_active {
+            opacity: 1;
+        }
+
+        &_item_current {
+            opacity: 1;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+.dropdown.dropdown_active {
+    .dropdown_head {
+        svg {
+            transform: rotate(180deg);
+        }
+    }
+    .dropdown_list {
+        opacity: 1;
+        z-index: 10;
+    }
+}
+
+.dropdown {
+    position: relative;
+    cursor: pointer;
+    
+    .dropdown_head {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        svg {
+            margin-left: 8px;
+            @include ease-02;
+        }
+    }
+
+    .dropdown_list {
+        height: 0;
+        opacity: 0;
+        position: absolute;
+        z-index: -1;
+        width: 200%;
+        top: calc(100% + 13px);
+        left: 0;
+        @include ease-02;
+
+
+        .dropdown_item {
+
+        }
+    }
+}

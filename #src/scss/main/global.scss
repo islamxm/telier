@@ -1,0 +1,61 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+    &:focus {
+        outline: none;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+input, button, textarea {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+
+input, textarea {
+
+    &::placeholder {
+        color: #E2E2E2;
+    }
+}
+
+
+body {
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 400;
+    color: var(--text);
+    font-family: 'Gilroy';
+}
+
+//HELPERS
+.container {
+    max-width: 1210px;
+    padding: 0 20px;
+    margin: 0 auto;
+    width: 100%;
+    overflow: hidden;
+}
+
+.section_title {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 38px;
+}
