@@ -26,14 +26,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    const productSlider = new Swiper('.product_slider', {
-        slidesPerView: 5,
-        spaceBetween: 25,
+    let productSlider;
+
+    productSlider = new Swiper('.product_slider', {
+        slidesPerView: 3,
+        spaceBetween: 20,
         navigation: {
             nextEl: '.product_nav_right',
             prevEl: '.product_nav_left',
+        },
+        breakpoints: {
+            1215: {
+                slidesPerView: 5,
+                spaceBetween: 25,
+                enabled: true
+            }
         }
     });
+
+    
 
 
 

@@ -26,3 +26,10 @@
     padding-left: 25px !important;
     padding-right: 25px !important;
 }
+
+@media (max-width: 1215px) {
+    .btn {
+        padding: 7px 5px !important;
+        text-align: center;
+    }
+}

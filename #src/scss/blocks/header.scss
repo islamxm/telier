@@ -320,7 +320,8 @@
 @media (max-width: 1215px) {
     .header {
 
-
+        padding-left: 10px;
+        padding-right: 10px;
         &__top {
             display: none;
         }
@@ -343,7 +344,7 @@
             }
 
             &_cat {
-                padding: 5px 6px;
+                padding: 5px 6px !important;
                 span {
                     display: none;
                 }
@@ -360,6 +361,7 @@
                     min-width: 242px;
                     max-width: 378px;
                     width: 100%;
+                    padding: 5px;
 
                 }
 
@@ -376,6 +378,12 @@
                 order: 4;
 
                 .main_btn {
+                    margin-right: 30px;
+                    padding: 0 !important;
+
+                    &:last-child {
+                        margin: 0;
+                    }
 
                     span {
                         display: none;

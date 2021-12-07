@@ -10,3 +10,15 @@
         margin-bottom: 41px;
     }
 }
+
+@media (max-width: 1215px) {
+
+    .product_list {
+        gap: 2%;
+
+        .product {
+            width: 32%;
+            max-width: unset;
+        }
+    }
+}

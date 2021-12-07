@@ -32,3 +32,35 @@
         }
     }
 }
+
+
+@media (max-width: 1215px) {
+    .adv {
+        padding: 24px 10px;
+
+        &__item {
+
+            max-width: 32%;
+
+            &_img {
+                width: 40px;
+                height: 40px;
+
+                svg {
+                    width: 40px !important;
+                    height: 40px !important;
+                }
+            }
+
+            &_name {
+                font-size: 12px;
+                line-height: 14px;
+            }
+
+            &_text {
+                font-size: 8px;
+                line-height: 10px;
+            }
+        }
+    }
+}

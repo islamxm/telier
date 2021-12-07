@@ -60,6 +60,12 @@ body {
     width: 100%;
     overflow: hidden;
 }
+
+@media (max-width: 1215px) {
+    .container {
+        padding: 0;
+    }
+}
 .o-visible {
     overflow: visible !important;
 }
@@ -68,6 +74,13 @@ body {
     font-weight: 600;
     font-size: 32px;
     line-height: 38px;
+}
+
+@media (max-width: 1215px) {
+    .section_title {
+        font-size: 20px;
+        line-height: 22px;
+    }
 }
 
 .section__top {
@@ -80,6 +93,18 @@ body {
         display: block;
         color: var(--btn);
         font-weight: 600;
+    }
+}
+
+@media (max-width: 1215px) {
+
+    .section__top {
+        
+        &_link {
+            font-size: 10px;
+            line-height: 12px;
+        }
+        margin-bottom: 15px;
     }
 }
 

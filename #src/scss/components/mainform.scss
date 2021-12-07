@@ -30,10 +30,17 @@
         input {
             width: 100%;
             padding: 10px;
+            border: 1px solid var(--btn_dis);
+            border-radius: 4px;
+            border-right: none;
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
         }
 
         .btn {
             padding: 10px 17px;
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
         }
     }
 
@@ -42,6 +49,43 @@
 
         a  {
             color: var(--btn);
+        }
+    }
+}
+
+@media (max-width: 1215px) {
+    .mainform {     
+        padding: 20px;
+
+        .section_title {
+            text-align: center;
+        }
+        &_subtitle {
+            text-align: center;
+            font-size: 12px;
+            line-height: 14px;
+            margin-bottom: 35px;
+        }
+
+        &_body {
+            margin-bottom: 40px;    
+
+            input {
+                padding: 5px;
+                font-size: 10px;    
+                line-height: 12px; 
+            }
+            .btn {
+                padding: 5px 5px;
+                font-size: 10px;    
+                line-height: 12px;   
+            }
+        }
+
+        &_info {
+            text-align: center;
+            font-size: 10px;    
+            line-height: 12px;  
         }
     }
 }

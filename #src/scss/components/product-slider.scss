@@ -2,6 +2,7 @@
     position: relative;
     overflow: visible;
     padding: 0 20px;
+
     .product_slider_wr {
 
         .product_slide {
@@ -27,4 +28,24 @@
             cursor: pointer;
         }
     }
+}
+
+
+@media (max-width: 1215px) {
+    // .product_slider {
+
+    //     height: auto !important;
+
+
+    //     .product_slider_wr {
+
+    //         display: flex !important;
+    //         flex-wrap: wrap !important;
+
+    //         .product_slide {
+    //             width: 32% !important;
+    //             margin-bottom: 25px;
+    //         }
+    //     }
+    // }
 }

@@ -24,3 +24,30 @@
         }
     }
 }
+
+@media (max-width: 1215px) {
+    .category_item {
+
+        &_img {
+
+            img {
+                max-width: 100%;
+                max-width: 100%;
+            }
+        }
+
+        &_info {
+
+            .name {
+                font-size: 6px;
+                line-height: 8px;
+            }
+
+            .price {
+                font-size: 6px;
+                line-height: 8px;
+            }
+        }
+    }
+
+}
