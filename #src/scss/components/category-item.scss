@@ -1,0 +1,26 @@
+.category_item {
+    border-radius: 12px;
+    background: rgba(250, 250, 250, 0.5);
+    padding: 40px 20px 20px;
+
+    &_img {
+        margin-bottom: 39px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &_info {
+        display: flex;
+        justify-content: space-evenly;
+        .name {
+            font-weight: 500;
+
+        }   
+
+        .price {
+            font-weight: 500;
+            opacity: .5;
+        }
+    }
+}

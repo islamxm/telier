@@ -1,10 +1,11 @@
 .btn {
     color: #fff;
     background-color: var(--btn);
-    padding: 14px 40px;
+    padding: 14px 30px;
     border-radius: 6px;
     display: flex;
     align-items: center;
+    justify-content: center;
     @include ease-02;
 
     &:hover {
@@ -19,4 +20,9 @@
     &:disabled {
         background-color: var(--btn_dis);
     }
+}
+
+.btn_dis {
+    padding-left: 25px !important;
+    padding-right: 25px !important;
 }

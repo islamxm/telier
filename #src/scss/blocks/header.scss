@@ -1,4 +1,5 @@
 .header {
+    position: relative;
 
     &__top {
         display: flex;
@@ -63,13 +64,50 @@
         &_logo {
 
         }
+        &_cat.active {
+
+            .open {
+                display: none;
+            }   
+
+            .close {    
+                display: block;
+            }
+        }
 
         &_cat {
             font-weight: 700;
+            display: flex;
+            align-items: center;
+
+            padding-top: 13px;
+            padding-bottom: 13px;
+            
             svg {
                 margin-right: 4px;
+                display: flex;
+                height: 20px;
+                width: 20px;
             }
+
+            &:active {
+                transform: none;
+            }
+
+            .open {
+                display: block;
+            }
+
+            .close {
+                display: none;
+            }
+
+
+
+
         }
+
+        
 
         &_search {
             display: flex;
@@ -77,7 +115,7 @@
             border-radius: 6px;
             padding: 3px;
             &_drop {
- 
+                
                 &_head {
                     padding: 10px 20px;
                     background-color: var(--light_back);
@@ -87,11 +125,25 @@
                 }
 
                 &_list {
-
+                    padding: 8px 12px;
+                    background: #EFF3F6;
+                    border-radius: 15px;
+                    border-top-left-radius: 0px;
                 }
 
                 &_item {
+                    display: block;
+                    line-height: 24px;
+
+                    border-bottom: 0.5px solid rgba(36, 36, 36, 0.05);
+
+                    &:hover {
+                        color: var(--btn);
+                    }
                     
+                    &:last-child {
+                        border: none;
+                    }
                 }
             }
 
@@ -108,9 +160,18 @@
         &_btns {
 
             a {
-                display: inline-block;
+                display: inline-flex;
+                align-items: center;
                 padding-left: 18px;
                 position: relative;
+
+                svg {
+                    margin-right: 5px;
+                }
+            }
+
+            .main_btn {
+
             }
 
             .ind {  
@@ -131,12 +192,12 @@
                 .ind {
                     background-color: var(--btn);                    
                 }
-                &:after {
-                    position: absolute;
-                    content: url('../img/cart.svg');
-                    top: 0;
-                    left: 0;
-                }
+                // &:after {
+                //     position: absolute;
+                //     content: url('../img/cart.svg');
+                //     top: 0;
+                //     left: 0;
+                // }
             }
 
             .favourite {
@@ -146,26 +207,190 @@
                     background-color: var(--orange);
                 }
 
-                &:after {
-                    position: absolute;
-                    content: url('../img/fav.svg');
-                    top: 0;
-                    left: 0;
-                }
+                // &:after {
+                //     position: absolute;
+                //     content: url('../img/fav.svg');
+                //     top: 0;
+                //     left: 0;
+                // }
             }
 
             .login {
-                &:after {
-                    position: absolute;
-                    content: url('../img/user.svg');
-                    top: 0;
-                    left: 0;
-                }
+                // &:after {
+                //     position: absolute;
+                //     content: url('../img/user.svg');
+                //     top: 0;
+                //     left: 0;
+                // }
             }
         }
 
 
     }
 
+    &__menu.active {
+        z-index: 100;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all; 
+        height: 350px;
+    }
+
+    &__menu {
+        position: absolute;
+        top: calc(100% - 10px);
+        left: 0;
+        width: 100%;
+        background: #FAFBFC;
+        z-index: -1;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        @include ease-02;
+        
+        padding: 15px;
+        display: flex;
+        height: 0;
+
+        &_aside {
+            min-width: 162px;
+            
+
+            &_list {
+
+                li {
+                    display: block;
+                    margin-bottom: 25px;
+                }
+            }
+
+            &_item {
+                font-weight: 500;
+                color: #3D5165;
+                display: block;
+
+            }
+        }
+
+        &_body {
+            width: 100%;
+            padding: 0 35px;
+            display: flex;
+            gap: 5%;
+            .menu_col {
+
+                &_item {
+
+                    &_title {
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 18.83px;
+                        margin-bottom: 10px;
+                    }
+
+                    
+                }
+                &_list {
+                    margin-bottom: 20px;
+                    &_item {
+                        display: block;
+                        margin-bottom: 10px;
+
+                        &:hover {
+                            color: var(--btn);
+                        }
+
+                        a {
+                            display: block;
+                        }
+                        
+                    }
+                }
+
+                
+            }
+        }
+
+    }
+
     
+}
+
+
+@media (max-width: 1215px) {
+    .header {
+
+
+        &__top {
+            display: none;
+        }
+
+        &__main {
+            flex-wrap: wrap;
+
+            &_logo {    
+                order: 1;
+                width: 50%;
+                margin-bottom: 15px;
+            }
+
+            &_cat_wr {
+                order: 2;
+                width: 50%;
+                justify-content: flex-end;
+                display: flex;
+                margin-bottom: 15px;
+            }
+
+            &_cat {
+                padding: 5px 6px;
+                span {
+                    display: none;
+                }
+
+                svg {
+                    margin: 0;
+                }
+            }
+
+            &_search {
+                order: 3;
+
+                &_input {
+                    min-width: 242px;
+                    max-width: 378px;
+                    width: 100%;
+
+                }
+
+                &_drop {
+                    display: none;
+                }
+
+                &_btn {
+                    display: none;
+                }
+            }
+
+            &_btns {
+                order: 4;
+
+                .main_btn {
+
+                    span {
+                        display: none;
+                    }
+
+                    .ind {
+                        display: block;
+                    }
+                }
+            }
+
+        }
+
+        &__menu {
+
+        }
+    }
 }

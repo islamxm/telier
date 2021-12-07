@@ -29,26 +29,36 @@
             <img src="./img/Logo.svg" alt="Logotype">
         </a>
 
-        <button class="btn header__main_cat">
-            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="header__main_cat_wr">
+            <button id="menuTrigger" class="btn header__main_cat">
+            <div class="open">
+                <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M2.20413 3.33333C2.20413 2.59695 2.80109 2 3.53747 2H6.20413C6.94051 2 7.53747 2.59695 7.53747 3.33333V6C7.53747 6.73638 6.94051 7.33333 6.20413 7.33333H3.53747C2.80109 7.33333 2.20413 6.73638 2.20413 6V3.33333ZM6.20413 3.33333H3.53747V6H6.20413V3.33333ZM8.8708 3.33333C8.8708 2.59695 9.46775 2 10.2041 2H12.8708C13.6072 2 14.2041 2.59695 14.2041 3.33333V6C14.2041 6.73638 13.6072 7.33333 12.8708 7.33333H10.2041C9.46775 7.33333 8.8708 6.73638 8.8708 6V3.33333ZM12.8708 3.33333H10.2041V6H12.8708V3.33333ZM2.20413 10C2.20413 9.26362 2.80109 8.66667 3.53747 8.66667H6.20413C6.94051 8.66667 7.53747 9.26362 7.53747 10V12.6667C7.53747 13.403 6.94051 14 6.20413 14H3.53747C2.80109 14 2.20413 13.403 2.20413 12.6667V10ZM6.20413 10H3.53747V12.6667H6.20413V10ZM8.8708 10C8.8708 9.26362 9.46775 8.66667 10.2041 8.66667H12.8708C13.6072 8.66667 14.2041 9.26362 14.2041 10V12.6667C14.2041 13.403 13.6072 14 12.8708 14H10.2041C9.46775 14 8.8708 13.403 8.8708 12.6667V10ZM12.8708 10H10.2041V12.6667H12.8708V10Z" fill="white"/>
                 </svg>
+            </div>
+            <div class="close">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.96967 3.96967C4.26256 3.67678 4.73744 3.67678 5.03033 3.96967L9 7.93934L12.9697 3.96967C13.2626 3.67678 13.7374 3.67678 14.0303 3.96967C14.3232 4.26256 14.3232 4.73744 14.0303 5.03033L10.0607 9L14.0303 12.9697C14.3232 13.2626 14.3232 13.7374 14.0303 14.0303C13.7374 14.3232 13.2626 14.3232 12.9697 14.0303L9 10.0607L5.03033 14.0303C4.73744 14.3232 4.26256 14.3232 3.96967 14.0303C3.67678 13.7374 3.67678 13.2626 3.96967 12.9697L7.93934 9L3.96967 5.03033C3.67678 4.73744 3.67678 4.26256 3.96967 3.96967Z" fill="white"/>
+                </svg>
+
+            </div>
                 
-            Каталог
+            <span>Каталог</span>
         </button>
+        </div>
         <div class="header__main_search">
             <div class="header__main_search_drop dropdown">
-                <div class="header__main_search_drop_head dropdown_head">
+                <div class="header__main_search_drop_head dropdown_head" data-drophead>
                     Везде
-                    <svg width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1.28101 4.00073C0.77231 4.00073 0.494417 3.40742 0.820081 3.01662L2.87239 0.553851C3.11227 0.265999 3.55438 0.265998 3.79426 0.553851L5.84656 3.01662C6.17223 3.40742 5.89433 4.00073 5.38563 4.00073L1.28101 4.00073Z" fill="#3D5165"/>
+                    <svg data-drophead width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path data-drophead d="M1.28101 4.00073C0.77231 4.00073 0.494417 3.40742 0.820081 3.01662L2.87239 0.553851C3.11227 0.265999 3.55438 0.265998 3.79426 0.553851L5.84656 3.01662C6.17223 3.40742 5.89433 4.00073 5.38563 4.00073L1.28101 4.00073Z" fill="#3D5165"/>
                         </svg>
                         
                 </div>
                 <div class="header__main_search_drop_list dropdown_list">
-                    <div class="header__main_search_drop_item dropdown_item">Везде</div>
-                    <div class="header__main_search_drop_item dropdown_item">Везде</div>
-                    <div class="header__main_search_drop_item dropdown_item">Везде</div>
+                    <div class="header__main_search_drop_item dropdown_item" data-droplistitem>Категория 1</div>
+                    <div class="header__main_search_drop_item dropdown_item" data-droplistitem>Категория 2</div>
+                    <div class="header__main_search_drop_item dropdown_item" data-droplistitem>Категория 3</div>
                 </div>
             </div>
             <input class="header__main_search_input" type="text" placeholder="Поиск по товарам">
@@ -60,17 +70,244 @@
             </button>
         </div>
         <div class="header__main_btns">
-            <a href="#" class="basket">
-                Корзина
+            <a href="#" class="main_btn basket">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.41631 1.33333L2.5054 8.41248C2.51333 8.47091 2.52991 8.5266 2.55381 8.5782C2.62575 8.73353 2.76401 8.85188 2.93226 8.8969C2.98366 8.91071 3.03752 8.91761 3.09262 8.91667H9.50008C9.75769 8.91667 9.98479 8.7477 10.0588 8.50095L11.8088 2.66762C11.8618 2.491 11.8282 2.29973 11.7181 2.15179C11.608 2.00385 11.4345 1.91667 11.2501 1.91667H2.68644L2.49459 0.669613C2.4874 0.617473 2.47332 0.567533 2.4533 0.52074C2.41697 0.435529 2.36132 0.361718 2.29259 0.303863C2.22881 0.250085 2.15335 0.209732 2.07056 0.187159C2.01844 0.172888 1.96377 0.16574 1.90782 0.166668H0.750081C0.427915 0.166668 0.166748 0.427835 0.166748 0.750001C0.166748 1.07217 0.427915 1.33333 0.750081 1.33333H1.41631ZM3.58388 7.75L2.86593 3.08333H10.4661L9.06606 7.75H3.58388Z" fill="#242424"/>
+                <path d="M4.83341 10.6667C4.83341 11.311 4.31108 11.8333 3.66675 11.8333C3.02242 11.8333 2.50008 11.311 2.50008 10.6667C2.50008 10.0223 3.02242 9.5 3.66675 9.5C4.31108 9.5 4.83341 10.0223 4.83341 10.6667Z" fill="#242424"/>
+                <path d="M10.0834 10.6667C10.0834 11.311 9.56108 11.8333 8.91675 11.8333C8.27242 11.8333 7.75008 11.311 7.75008 10.6667C7.75008 10.0223 8.27242 9.5 8.91675 9.5C9.56108 9.5 10.0834 10.0223 10.0834 10.6667Z" fill="#242424"/>
+                </svg>
+
+                <span>Корзина</span>
                 <span class="ind">2</span>
             </a>
-            <a href="#" class="favourite">
-                Избранное
+            <a href="#" class="main_btn favourite">
+                <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 1.167C0 0.522484 0.522483 0 1.167 0H8.169C8.81351 0 9.336 0.522483 9.336 1.167V11.0865C9.336 11.3051 9.21384 11.5053 9.0195 11.6053C8.82515 11.7053 8.59121 11.6884 8.41335 11.5613L4.668 8.88606L0.922652 11.5613C0.744793 11.6884 0.510848 11.7053 0.316501 11.6053C0.122154 11.5053 0 11.3051 0 11.0865V1.167ZM8.169 1.167L1.167 1.167V9.95265L4.32885 7.69419C4.53173 7.54927 4.80427 7.54927 5.00715 7.69419L8.169 9.95265V1.167Z" fill="#242424"/>
+                </svg>
+                <span>Избранное</span>
                 <span class="ind">2</span>
             </a>
-            <a href="#" class="login">
-                Войти
+            <a href="#" class="main_btn login">
+                <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.2515 1.167C3.96247 1.167 2.9175 2.21197 2.9175 3.501C2.9175 4.79003 3.96247 5.835 5.2515 5.835C6.54053 5.835 7.5855 4.79003 7.5855 3.501C7.5855 2.21197 6.54053 1.167 5.2515 1.167ZM1.7505 3.501C1.7505 1.56745 3.31795 0 5.2515 0C7.18505 0 8.7525 1.56745 8.7525 3.501C8.7525 5.43455 7.18505 7.002 5.2515 7.002C3.31795 7.002 1.7505 5.43455 1.7505 3.501ZM2.9175 9.336C1.95073 9.336 1.167 10.1197 1.167 11.0865C1.167 11.4088 0.905758 11.67 0.5835 11.67C0.261242 11.67 0 11.4088 0 11.0865C0 9.47521 1.30621 8.169 2.9175 8.169H7.5855C9.19679 8.169 10.503 9.47521 10.503 11.0865C10.503 11.4088 10.2418 11.67 9.9195 11.67C9.59724 11.67 9.336 11.4088 9.336 11.0865C9.336 10.1197 8.55227 9.336 7.5855 9.336H2.9175Z" fill="#242424"/>
+                </svg>
+                <span>Войти</span>
+                
             </a>
         </div>
+
+        
     </div>
+
+    <div class="header__menu" id="mainMenu">
+        <div class="header__menu_aside scroll">
+            <ul class="header__menu_aside_list">
+                <li>
+                    <a href="#" class="header__menu_aside_item">Электроника</a>
+                </li>
+                <li>
+                    <a href="#" class="header__menu_aside_item">Одежда</a>
+                </li>
+                <li>
+                    <a href="#" class="header__menu_aside_item">Одежда</a>
+                </li>
+                <li>
+                    <a href="#" class="header__menu_aside_item">Обувь</a>
+                </li>
+                <li>
+                    <a href="#" class="header__menu_aside_item">Дом и сад</a>
+                </li>
+                <li>
+                    <a href="#" class="header__menu_aside_item">Электроника</a>
+                </li>
+                <li>
+                    <a href="#" class="header__menu_aside_item">Одежда</a>
+                </li>
+                <li>
+                    <a href="#" class="header__menu_aside_item">Одежда</a>
+                </li>
+                <li>
+                    <a href="#" class="header__menu_aside_item">Обувь</a>
+                </li>
+                <li>
+                    <a href="#" class="header__menu_aside_item">Дом и сад</a>
+                </li>
+            </ul>
+        </div>
+        <div class="header__menu_body scroll">
+            <div class="menu_col">
+
+                <div class="menu_col_item">
+                    <h3 class="menu_col_item_title">Телефоны и смарт-часы</h3>
+                    <ul class="menu_col_list">
+                        <li class="menu_col_list_item">
+                            <a href="#">Смартфоны</a>
+                        </li>
+                        <li class="menu_col_list_item">
+                            <a href="#">Смарт-часы и фитнес-браслеты</a>
+                        </li>
+                        <li class="menu_col_list_item">
+                            <a href="#">SIM-карты</a>
+                        </li>
+                        <li class="menu_col_list_item">
+                            <a href="#">Аксессуары для смартфонов и телефонов</a>
+                        </li>
+                        <li class="menu_col_list_item">
+                            <a href="#">Аксессуары для умных часов и фитнес-браслетов</a>
+                        </li>
+                        <li class="menu_col_list_item">
+                            <a href="#">Мобильные телефоны</a>
+                        </li>
+                        <li class="menu_col_list_item">
+                            <a href="#">DECT-телефоны</a>
+                        </li>
+                        <li class="menu_col_list_item">
+                            <a href="#">Проводные телефоны</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu_col_item">
+                    <h3 class="menu_col_item_title">Телефоны и смарт-часы</h3>
+                    <ul class="menu_col_list">
+                        <li class="menu_col_list_item">
+                            <a href="#">Смартфоны</a>
+                        </li>
+                        <li class="menu_col_list_item">
+                            <a href="#">Смарт-часы и фитнес-браслеты</a>
+                        </li>
+                        <li class="menu_col_list_item">
+                            <a href="#">SIM-карты</a>
+                        </li>
+                        <li class="menu_col_list_item">
+                            <a href="#">Аксессуары для смартфонов и телефонов</a>
+                        </li>
+                        <li class="menu_col_list_item">
+                            <a href="#">Аксессуары для умных часов и фитнес-браслетов</a>
+                        </li>
+                        <li class="menu_col_list_item">
+                            <a href="#">Мобильные телефоны</a>
+                        </li>
+                        <li class="menu_col_list_item">
+                            <a href="#">DECT-телефоны</a>
+                        </li>
+                        <li class="menu_col_list_item">
+                            <a href="#">Проводные телефоны</a>
+                        </li>
+                    </ul>
+                </div>
+            </div> 
+            
+            <div class="menu_col">
+                <div class="menu_col_item">
+                    <h3 class="menu_col_item_title">Телефоны и смарт-часы</h3>
+                    <ul class="menu_col_list">
+                        <li class="menu_col_list_item">
+                            <a href="#">Смартфоны</a>
+                        </li>
+                        <li class="menu_col_list_item">
+                            <a href="#">Смарт-часы и фитнес-браслеты</a>
+                        </li>
+                        <li class="menu_col_list_item">
+                            <a href="#">SIM-карты</a>
+                        </li>
+                        <li class="menu_col_list_item">
+                            <a href="#">Аксессуары для смартфонов и телефонов</a>
+                        </li>
+                        <li class="menu_col_list_item">
+                            <a href="#">Аксессуары для умных часов и фитнес-браслетов</a>
+                        </li>
+                        <li class="menu_col_list_item">
+                            <a href="#">Мобильные телефоны</a>
+                        </li>
+                        <li class="menu_col_list_item">
+                            <a href="#">DECT-телефоны</a>
+                        </li>
+                        <li class="menu_col_list_item">
+                            <a href="#">Проводные телефоны</a>
+                        </li>
+                        <li class="menu_col_list_item">
+                            <a href="#">Смартфоны</a>
+                        </li>
+                        <li class="menu_col_list_item">
+                            <a href="#">Смарт-часы и фитнес-браслеты</a>
+                        </li>
+                        <li class="menu_col_list_item">
+                            <a href="#">SIM-карты</a>
+                        </li>
+                        <li class="menu_col_list_item">
+                            <a href="#">Аксессуары для смартфонов и телефонов</a>
+                        </li>
+                        <li class="menu_col_list_item">
+                            <a href="#">Аксессуары для умных часов и фитнес-браслетов</a>
+                        </li>
+                        <li class="menu_col_list_item">
+                            <a href="#">Мобильные телефоны</a>
+                        </li>
+                        <li class="menu_col_list_item">
+                            <a href="#">DECT-телефоны</a>
+                        </li>
+                        <li class="menu_col_list_item">
+                            <a href="#">Проводные телефоны</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="menu_col">
+                <div class="menu_col_item">
+                    <h3 class="menu_col_item_title">Телефоны и смарт-часы</h3>
+                    <ul class="menu_col_list">
+                        <li class="menu_col_list_item">
+                            <a href="#">Смартфоны</a>
+                        </li>
+                        <li class="menu_col_list_item">
+                            <a href="#">Смарт-часы и фитнес-браслеты</a>
+                        </li>
+                        <li class="menu_col_list_item">
+                            <a href="#">SIM-карты</a>
+                        </li>
+                        <li class="menu_col_list_item">
+                            <a href="#">Аксессуары для смартфонов и телефонов</a>
+                        </li>
+                        <li class="menu_col_list_item">
+                            <a href="#">Аксессуары для умных часов и фитнес-браслетов</a>
+                        </li>
+                        <li class="menu_col_list_item">
+                            <a href="#">Мобильные телефоны</a>
+                        </li>
+                        <li class="menu_col_list_item">
+                            <a href="#">DECT-телефоны</a>
+                        </li>
+                        <li class="menu_col_list_item">
+                            <a href="#">Проводные телефоны</a>
+                        </li>
+                        <li class="menu_col_list_item">
+                            <a href="#">Смартфоны</a>
+                        </li>
+                        <li class="menu_col_list_item">
+                            <a href="#">Смарт-часы и фитнес-браслеты</a>
+                        </li>
+                        <li class="menu_col_list_item">
+                            <a href="#">SIM-карты</a>
+                        </li>
+                        <li class="menu_col_list_item">
+                            <a href="#">Аксессуары для смартфонов и телефонов</a>
+                        </li>
+                        <li class="menu_col_list_item">
+                            <a href="#">Аксессуары для умных часов и фитнес-браслетов</a>
+                        </li>
+                        <li class="menu_col_list_item">
+                            <a href="#">Мобильные телефоны</a>
+                        </li>
+                        <li class="menu_col_list_item">
+                            <a href="#">DECT-телефоны</a>
+                        </li>
+                        <li class="menu_col_list_item">
+                            <a href="#">Проводные телефоны</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
 </header>

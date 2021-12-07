@@ -1,0 +1,58 @@
+.footer {
+    padding-top: 60px;
+
+    &__main {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 28px;
+        border-bottom: 1px solid rgba(36, 36, 36, 0.15);
+    }
+
+    &__logo {
+        display: block;
+    }
+
+    &__list {
+
+        &_title {
+            font-weight: 600;
+            margin-bottom: 10px;
+
+        }
+
+        .list {
+
+            li {
+                margin-bottom: 5px;
+                .item {
+
+                }
+            }
+        }
+    }
+
+    &__bottom {
+        padding: 20px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__copy {
+        font-weight: 500;
+    }
+
+    &__pay {
+        display: flex;
+        align-items: center;
+        &_item {
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+}

@@ -44,6 +44,13 @@ body {
     color: var(--text);
     font-family: 'Gilroy';
 }
+.main {
+    z-index: 0;
+}
+
+.hide {
+    display: none !important;
+}
 
 //HELPERS
 .container {
@@ -53,9 +60,44 @@ body {
     width: 100%;
     overflow: hidden;
 }
+.o-visible {
+    overflow: visible !important;
+}
 
 .section_title {
     font-weight: 600;
     font-size: 32px;
     line-height: 38px;
+}
+
+.section__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20px;
+
+    &_link {
+        display: block;
+        color: var(--btn);
+        font-weight: 600;
+    }
+}
+
+
+.scroll {
+
+    overflow: hidden;
+    overflow-y: scroll !important; 
+
+    &::-webkit-scrollbar {
+        width: 4px;
+        background-color: transparent;
+        border: 0.5px solid rgba(61, 81, 101, 0.15);
+        border-radius: 60px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: #3D5165;
+        border-radius: 60px;
+        width: 2px;
+    }
 }
