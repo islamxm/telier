@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let productSlider;
 
     productSlider = new Swiper('.product_slider', {
-        slidesPerView: 3,
+        slidesPerView: 2,
         spaceBetween: 20,
         navigation: {
             nextEl: '.product_nav_right',
@@ -56,6 +56,12 @@ document.addEventListener('DOMContentLoaded', () => {
             menuTrigger.classList.toggle('active');
 
             mainCatalog.classList.toggle('active');
+
+            if(mainCatalog.classList.contains('active')) {
+                document.body.classList.add('no-scroll');
+            } else {
+                document.body.classList.remove('no-scroll');
+            }
         });
     }
 
@@ -86,6 +92,43 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+
+
+    const tabs = document.querySelectorAll('.header__menu_aside_item');
+    const tabsCotent = document.querySelectorAll('.header__menu_body');
+    const tabsParent = document.querySelector('.header__menu_aside_list');
+    const tabContentCloseBtn = document.querySelectorAll('[data-menuclose]');
+
+    function hideTabContent() {
+        tabsCotent.forEach(i => {
+            i.style.display = 'none';
+        });
+    }
+
+    function showTabContent(i = 0) {
+        tabsCotent[i].style.display = 'flex';
+    }
+
+    hideTabContent();
+    // showTabContent();
+
+    tabsParent.addEventListener('click', (e) => {
+        let tar = e.target;
+        if(tar && tar.classList.contains('header__menu_aside_item')) {
+            tabs.forEach((i, index) => {
+                if(tar == i) {
+                    hideTabContent();
+                    showTabContent(index);
+                }
+            })
+        }
+    })
+    tabContentCloseBtn.forEach(i => {
+        i.addEventListener('click', hideTabContent);
+    });
+
+    
+ 
     dropDown('.header__main_search_drop', '.header__main_search_drop_list');
 });
 

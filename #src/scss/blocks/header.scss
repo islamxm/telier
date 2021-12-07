@@ -162,11 +162,12 @@
             a {
                 display: inline-flex;
                 align-items: center;
-                padding-left: 18px;
                 position: relative;
 
                 svg {
                     margin-right: 5px;
+                    width: 17px;
+                    height: 17px;
                 }
             }
 
@@ -175,19 +176,19 @@
             }
 
             .ind {  
-                font-size: 4px;
-                line-height: 5px;
+                font-size: 10px;
+                line-height: 12px;
                 font-weight: 900;
                 color: #fff;
                 position: absolute;
-                top: -3px;
+                top: -9px;
                 right: -6px;
                 border-radius: 1px;
-                padding: 1px 4px;
+                padding: 2px 7px;
                 display: block;
             }
             .basket {   
-                margin-right: 42px;
+                margin-right: 25px;
                 
                 .ind {
                     background-color: var(--btn);                    
@@ -201,7 +202,7 @@
             }
 
             .favourite {
-                margin-right: 42px;
+                margin-right: 25px;
 
                 .ind {
                     background-color: var(--orange);
@@ -261,6 +262,8 @@
                 li {
                     display: block;
                     margin-bottom: 25px;
+
+
                 }
             }
 
@@ -268,15 +271,28 @@
                 font-weight: 500;
                 color: #3D5165;
                 display: block;
+                cursor: pointer;
+                @include ease-02;
 
+                &:hover {
+                    color: var(--btn);
+                }
             }
+
         }
 
         &_body {
             width: 100%;
             padding: 0 35px;
-            display: flex;
+            // display: flex;
             gap: 5%;
+            display: none;
+
+            button[data-menuclose] {
+                display: none;
+            }
+
+
             .menu_col {
 
                 &_item {
@@ -319,9 +335,14 @@
 
 @media (max-width: 1215px) {
     .header {
-
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
         padding-left: 10px;
         padding-right: 10px;
+        z-index: 10000;
+        background-color: #fff;
         &__top {
             display: none;
         }
@@ -378,12 +399,10 @@
                 order: 4;
 
                 .main_btn {
-                    margin-right: 30px;
+                    margin-right: 15px !important;
                     padding: 0 !important;
 
-                    &:last-child {
-                        margin: 0;
-                    }
+                    
 
                     span {
                         display: none;
@@ -393,12 +412,48 @@
                         display: block;
                     }
                 }
+
+                .login {
+                    margin: 0 !important; 
+                }
+
             }
 
         }
-
+        &__menu.active {
+            height: 100vh !important;
+        }
         &__menu {
+            height: 100%;
+            flex-direction: column;
 
+            &_aside {
+
+                &_list {
+
+                }
+            }
+
+            &_body {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 100;
+                background-color: #fff;
+                flex-direction: column;
+                padding: 15px;
+
+                button[data-menuclose] {
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    right: 10px;
+                    cursor: pointer;
+
+                }
+            }
         }
     }
 }

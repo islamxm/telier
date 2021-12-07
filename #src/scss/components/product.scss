@@ -32,8 +32,8 @@
         }
 
         .info {
-            font-size: 8px;
-            line-height: 9px;
+            font-size: 16px;
+            line-height: 18px;
             font-weight: 500;
 
             span {
@@ -70,11 +70,11 @@
         gap: 5px;
 
         .btn {
-            padding: 10px 50px;
+            // padding: 10px 50px;
             width: 100%;
         }
         .fav {
-            padding: 10px 11px;
+            padding: 14px 14px;
             border-radius: 6px;
             background-color: var(--light_back);
             display: flex;
@@ -112,42 +112,48 @@
 
         .product_rate {
             margin: 0;
+            margin-bottom: 5px;
+
         }
 
         .product_name {
-            font-size: 8px;
-            line-height: 10px;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+            margin-bottom: 10px;
         }
 
         .product_price {
 
             .actual {
-                font-size: 12px;
-                line-height: 14px;
+                // font-size: 12px;
+                // line-height: 14px;
+                font-size: 18px;
+                line-height: 20px;
+                font-weight: 600;
             }
 
             .old {
-                font-size: 8px;
-                line-height: 10px;
+                font-size: 14px;
+                line-height: 16px;
             }
         }
 
         .product_btn {
             .btn {
-                font-size: 8px;
-                padding: 4px !important;
-                line-height: 10px;
+                // padding: 4px !important;
                 width: 100%;
                 border-radius: 4px;
             }
 
             .fav {
-                padding: 4px;
+                // padding: 4px;
                 border-radius: 4px;
+                padding: 10px;
 
                 svg {
-                    width: 7px;
-                    height: 7px;
+                    // width: 7px;
+                    // height: 7px;
                 }
             }
         }

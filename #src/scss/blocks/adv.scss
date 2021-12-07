@@ -37,10 +37,13 @@
 @media (max-width: 1215px) {
     .adv {
         padding: 24px 10px;
+        flex-wrap: wrap;
+        justify-content: center;
 
         &__item {
 
-            max-width: 32%;
+            width: 100%;
+            margin-bottom: 35px;
 
             &_img {
                 width: 40px;
@@ -53,13 +56,15 @@
             }
 
             &_name {
-                font-size: 12px;
-                line-height: 14px;
+                // font-size: 12px;
+                // line-height: 14px;
+                font-size: 16px;
+                line-height: 18px;
             }
 
             &_text {
-                font-size: 8px;
-                line-height: 10px;
+                font-size: 14px;
+                line-height: 16px;
             }
         }
     }

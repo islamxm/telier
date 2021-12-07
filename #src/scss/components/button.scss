@@ -1,19 +1,21 @@
 .btn {
     color: #fff;
     background-color: var(--btn);
-    padding: 14px 30px;
+    padding: 12px 20px;
     border-radius: 6px;
+    text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
     @include ease-02;
 
     &:hover {
-        background-color: var(--btn_hover);
+        background-color: #0030FF;
     }
 
     &:active {
         background-color: var(--btn_hover);
+        background-color: #0030FF;
         transform: scale(0.95);
     }
 
@@ -29,7 +31,9 @@
 
 @media (max-width: 1215px) {
     .btn {
-        padding: 7px 5px !important;
+        padding: 8px 4px !important;
         text-align: center;
+        font-size: 12px;
+        line-height: 14px;
     }
 }
