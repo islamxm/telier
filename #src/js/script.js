@@ -2,6 +2,20 @@ import Swiper from './libs/swiper';
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    const tabs = document.querySelectorAll('.header__menu_aside_item');
+    const tabsCotent = document.querySelectorAll('.header__menu_body');
+    const tabsParent = document.querySelector('.header__menu_aside_list');
+    const tabContentCloseBtn = document.querySelectorAll('[data-menuclose]');
+
+    function hideTabContent() {
+        tabsCotent.forEach(i => {
+            i.style.display = 'none';
+        });
+    }
+
+    function showTabContent(i = 0) {
+        tabsCotent[i].style.display = 'flex';
+    }
 
     const prevSwiper = new Swiper('.prev__in', {
         // autoplay: {
@@ -68,8 +82,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 const header = document.querySelector('.header');
                 document.body.classList.add('no-scroll');
                 mainCatalog.style.cssText = `height: calc(100vh - ${header.clientHeight}px + 10px)`;
+            
             } else {
                 document.body.classList.remove('no-scroll');
+                showTabContent();
                 // mainCatalog.style.cssText = 'height: 0px';
             }
         });
@@ -83,8 +99,13 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 document.body.classList.remove('no-scroll');
                 // mainCatalog.style.cssText = 'height: 0px';
+                showTabContent();
             }
     })
+
+    if(window.innerWidth > 1215) {
+        showTabContent();
+    }
 
 
     function dropDown(itemQuery, itemListQuery) {
@@ -115,20 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    const tabs = document.querySelectorAll('.header__menu_aside_item');
-    const tabsCotent = document.querySelectorAll('.header__menu_body');
-    const tabsParent = document.querySelector('.header__menu_aside_list');
-    const tabContentCloseBtn = document.querySelectorAll('[data-menuclose]');
-
-    function hideTabContent() {
-        tabsCotent.forEach(i => {
-            i.style.display = 'none';
-        });
-    }
-
-    function showTabContent(i = 0) {
-        tabsCotent[i].style.display = 'flex';
-    }
+    
 
     // hideTabContent();
     // showTabContent();
