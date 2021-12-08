@@ -18,6 +18,29 @@
             left: 0;
             z-index: 10;
             cursor: pointer;
+
+            svg {
+                circle {
+                    @include ease-02;
+                }
+
+                path {
+                    @include ease-02;
+                }
+            }
+
+            &:hover {
+
+                svg {
+                    circle {
+                        fill: #ccc;
+                    }
+
+                    path {
+                        fill: #fff;
+                    }
+                }
+            }
         }
 
         .product_nav_right {
@@ -26,6 +49,29 @@
             right: 0;
             z-index: 10;
             cursor: pointer;
+
+            svg {
+                circle {
+                    @include ease-02;
+                }
+
+                path {
+                    @include ease-02;
+                }
+            }
+
+            &:hover {
+
+                svg {
+                    circle {
+                        fill: #ccc;
+                    }
+
+                    path {
+                        fill: #fff;
+                    }
+                }
+            }
         }
     }
 }

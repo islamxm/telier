@@ -42,6 +42,10 @@
 
             li {
                 margin-right: 20px;
+
+                &:last-child {
+                    margin: 0;
+                }
             }
 
             &_item {
@@ -111,7 +115,7 @@
 
         &_search {
             display: flex;
-            border: 1px solid #EFF3F6;
+            border: 1px solid #ccc;
             border-radius: 6px;
             padding: 3px;
             &_drop {
@@ -150,6 +154,10 @@
             &_input {
                 width: 370px;
                 padding: 10px;
+
+                &::placeholder {
+                    color: #ccc;
+                }
             }
 
             &_btn {
@@ -165,7 +173,7 @@
                 position: relative;
 
                 svg {
-                    margin-right: 5px;
+                    margin-right: 10px;
                     width: 17px;
                     height: 17px;
                 }
@@ -173,6 +181,11 @@
 
             .main_btn {
 
+                @include ease-02;
+
+                &:hover {
+                    color: var(--btn);
+                }
             }
 
             .ind {  
@@ -182,10 +195,11 @@
                 color: #fff;
                 position: absolute;
                 top: -9px;
-                right: -6px;
+                left: 7px;
                 border-radius: 1px;
-                padding: 2px 7px;
+                padding: 1px 7px;
                 display: block;
+                border-radius: 4px;
             }
             .basket {   
                 margin-right: 25px;
@@ -349,6 +363,7 @@
 
         &__main {
             flex-wrap: wrap;
+            padding-bottom: 20px;   
 
             &_logo {    
                 order: 1;
@@ -377,12 +392,25 @@
 
             &_search {
                 order: 3;
+                padding: 0; 
+                max-width:  260px;
+                width: 100%;  
+                font-size: 14px;    
+                line-height: 16px;  
+                padding-left: 15px;
+                position: relative; 
+
+                &:after {
+                    position: absolute; 
+                    content: url('../img/mob-search.svg');
+                    top: calc(50% - 8.5px); 
+                    left: 5px;  
+                }   
 
                 &_input {
-                    min-width: 242px;
-                    max-width: 378px;
-                    width: 100%;
-                    padding: 5px;
+                    display: block; 
+                    width: 100%;    
+                    padding: 7px 5px;
 
                 }
 
@@ -421,11 +449,11 @@
 
         }
         &__menu.active {
-            height: 100vh !important;
+
         }
         &__menu {
-            height: 100%;
             flex-direction: column;
+            width: 100%;
 
             &_aside {
 

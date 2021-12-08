@@ -55,7 +55,7 @@ body {
 
 @media (max-width: 1215px) {
     .main {
-        padding-top: 120px;
+        padding-top: 110px;
     }
 }
 
@@ -104,6 +104,11 @@ body {
         display: block;
         color: var(--btn);
         font-weight: 600;
+        @include ease-02;
+
+        &:hover {
+            color: var(--orange);
+        }
     }
 }
 

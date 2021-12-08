@@ -25,7 +25,10 @@
             li {
                 margin-bottom: 5px;
                 .item {
-
+                    @include ease-02;
+                    &:hover {
+                        color: var(--btn);
+                    }
                 }
             }
         }

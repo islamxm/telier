@@ -70,6 +70,28 @@
             left: -16px;
             left: 0;
             z-index: 10;
+
+            svg {
+                circle {
+                    @include ease-02;
+                }
+                path {
+                    @include ease-02;
+                }
+            }
+            &:hover {
+
+                svg {
+
+                    circle {
+                        fill: #ccc;
+                    }
+
+                    path {
+                        fill: #fff;
+                    }
+                }
+            }
         }
 
         &_right {
@@ -79,6 +101,28 @@
             right: -12px;
             right: 0;
             z-index: 10;
+            svg {
+                circle {
+                    @include ease-02;
+                }
+                path {
+                    @include ease-02;
+                }
+            }
+
+            &:hover {
+
+                svg {
+
+                    circle {
+                        fill: #ccc;
+                    }
+
+                    path {
+                        fill: #fff;
+                    }
+                }
+            }
         }
     }
 
@@ -111,7 +155,8 @@
 
 @media(max-width: 1215px) {
     .prev {
-
+        padding-left: 10px;
+        padding-right: 10px;
         &__in {
             padding: 0;
             
