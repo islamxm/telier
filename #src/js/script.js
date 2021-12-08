@@ -65,12 +65,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if(window.innerWidth < 1215 && mainCatalog.classList.contains('active')) {
                 const header = document.querySelector('.header');
+                document.body.classList.add('no-scroll');
                 mainCatalog.style.cssText = `height: calc(100vh - ${header.clientHeight}px + 10px)`;
             } else {
+                document.body.classList.remove('no-scroll');
                 // mainCatalog.style.cssText = 'height: 0px';
             }
         });
     }
+
+    window.addEventListener('resize', () => {
+        if(window.innerWidth < 1215 && mainCatalog.classList.contains('active')) {
+                const header = document.querySelector('.header');
+                document.body.classList.add('no-scroll');
+                mainCatalog.style.cssText = `height: calc(100vh - ${header.clientHeight}px + 10px)`;
+            } else {
+                document.body.classList.remove('no-scroll');
+                // mainCatalog.style.cssText = 'height: 0px';
+            }
+    })
 
 
     function dropDown(itemQuery, itemListQuery) {

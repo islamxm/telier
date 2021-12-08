@@ -75,7 +75,9 @@
             }   
 
             .close {    
-                display: block;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
         }
 
@@ -99,7 +101,9 @@
             }
 
             .open {
-                display: block;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
 
             .close {
@@ -382,10 +386,7 @@
             &_cat {
                 padding: 5px 6px !important;
 
-                .close {
-                    display: flex;
-                    align-items: center;
-                }
+
                 span {
                     display: none;
                 }
