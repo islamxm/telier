@@ -1,0 +1,161 @@
+.filter {
+	width: 240px !important;
+	background-color: #fff;
+	display: block;
+	padding: 20px 10px;
+
+	.filter_title {
+		margin-bottom: 9px;
+		font-weight: 600;
+	}
+
+	&_category.active {
+		
+	}
+	&_category {
+		margin-bottom: 30px;
+
+		&_i {
+			// font-weight: 600;
+			margin-bottom: 8px;
+			padding-left: 10px;
+			position: relative;
+			cursor: pointer;
+
+			&:after {
+				position: absolute;
+				content: url('../img/filter-ar.svg');
+				top: -3px;
+				left: 0;
+				@include ease-02;
+				// transform: rotate(90deg);
+			}
+
+		}
+
+		.category.active {
+			.filter_category_i {
+			font-weight: 500;
+			&:after {
+				transform: rotate(90deg);
+			}
+		}
+		}
+
+		&_title {
+
+		}
+
+		&_list {
+			padding-left: 10px;
+			@include ease-02;
+			height: 0;
+			overflow: hidden;
+		}
+		&_item {
+			display: block;
+			margin-bottom: 8px;
+			font-size: 14px;
+			line-height: 16px;
+			@include ease-02;
+
+			a {
+				display: block;
+			}
+
+			&:hover {
+				color: var(--btn);
+			}
+		}
+	}
+
+	&_checklist {
+		margin-bottom: 28px;
+		.filter_form {
+
+			&_item {
+				display: flex;
+				margin-bottom: 8px;
+				width: 100%;
+				input {
+					position: absolute;
+					top: 0;
+					left: 0;
+					z-index: -1;
+					opacity: 0;
+					visibility: hidden;
+					appearance: none;
+				}	
+
+				label {
+					font-size: 14px;
+					line-height: 16px;
+					position: relative;
+					padding-left: 10px;
+					display: block;
+					width: 100%;
+					cursor: pointer;
+
+					&:after {
+						position: absolute;
+						top: 0;
+						left: 0;
+						content: url('../img/checkbox.svg');
+					}
+				}
+
+				input:checked ~ label {
+					color: var(--btn);
+
+					&:after {
+						content: url('../img/checked.svg');
+					}
+				}
+			}
+
+			.hide_list {
+				height: 0;
+				@include ease-02;
+				overflow: hidden;
+			}
+
+			.toggler {
+				color: var(--btn);
+				font-weight: 500;
+				font-size: 15px;
+				line-height: 17px;
+				cursor: pointer;
+			}
+		}
+	}
+
+	&_more {
+		width: 100%;
+		&_btn {
+			width: 100%;
+			color: var(--btn);
+			background-color: var(--light_back);
+			border-radius: 8px;
+			padding: 10px;
+			text-align: center;
+			@include ease-02;
+			font-size: 14px;
+			line-height: 16px;
+			font-weight: 500;
+
+			&:hover {
+				background-color: var(--btn);
+				color: #fff;
+			}
+
+			&:active {
+				transform: scale(0.97);
+			}
+		}
+	}
+}
+
+@media (max-width: 1215px) {
+
+	.filter {display: none;}
+}

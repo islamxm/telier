@@ -1,0 +1,50 @@
+.main_content {
+	
+	width: 100%;
+
+	&_wr {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.section_title {
+		margin-bottom: 30px;
+	}
+
+	.list {
+		max-width: 910px;
+
+		.product_list {
+			padding: 0;
+
+			.product {
+				max-width: unset;
+				width: 23%;
+			}
+		}
+	}
+}
+
+@media (max-width: 1215px) {
+
+	.main_content {
+
+		&_wr {
+
+		}
+
+		.list {
+			max-width: unset;
+
+			.product_list {
+		        gap: 2%;
+
+		        .product {
+		            width: 49%;
+		            max-width: unset;
+		        }
+		    }
+		}
+	}
+}

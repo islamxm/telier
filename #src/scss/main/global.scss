@@ -142,3 +142,20 @@ body {
         width: 2px;
     }
 }
+
+.path {
+    padding: 15px 0;
+    width: 100%;
+
+    &_list {
+        display: flex;
+    }
+
+    &_item {
+
+    }
+
+    &_item.path_item_current {
+
+    }
+}

@@ -927,6 +927,15 @@ body {
   width: 2px;
 }
 
+.path {
+  padding: 15px 0;
+  width: 100%;
+}
+.path_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 @font-face {
   font-family: "Gilroy";
   src: url("../fonts/Gilroy-ExtraBold.eot");
@@ -1311,6 +1320,7 @@ body {
   .product .product_img img {
     max-width: 100%;
     max-height: 100%;
+    pointer-events: none;
   }
   .product .product_rate {
     margin: 0;
@@ -1506,6 +1516,153 @@ body {
     text-align: center;
     font-size: 10px;
     line-height: 12px;
+  }
+}
+.filter {
+  width: 240px !important;
+  background-color: #fff;
+  display: block;
+  padding: 20px 10px;
+}
+.filter .filter_title {
+  margin-bottom: 9px;
+  font-weight: 600;
+}
+.filter_category {
+  margin-bottom: 30px;
+}
+.filter_category_i {
+  margin-bottom: 8px;
+  padding-left: 10px;
+  position: relative;
+  cursor: pointer;
+}
+.filter_category_i:after {
+  position: absolute;
+  content: url("../img/filter-ar.svg");
+  top: -3px;
+  left: 0;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.filter_category .category.active .filter_category_i {
+  font-weight: 500;
+}
+.filter_category .category.active .filter_category_i:after {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+.filter_category_list {
+  padding-left: 10px;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  height: 0;
+  overflow: hidden;
+}
+.filter_category_item {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  line-height: 16px;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.filter_category_item a {
+  display: block;
+}
+.filter_category_item:hover {
+  color: var(--btn);
+}
+.filter_checklist {
+  margin-bottom: 28px;
+}
+.filter_checklist .filter_form_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 8px;
+  width: 100%;
+}
+.filter_checklist .filter_form_item input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.filter_checklist .filter_form_item label {
+  font-size: 14px;
+  line-height: 16px;
+  position: relative;
+  padding-left: 10px;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+}
+.filter_checklist .filter_form_item label:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: url("../img/checkbox.svg");
+}
+.filter_checklist .filter_form_item input:checked ~ label {
+  color: var(--btn);
+}
+.filter_checklist .filter_form_item input:checked ~ label:after {
+  content: url("../img/checked.svg");
+}
+.filter_checklist .filter_form .hide_list {
+  height: 0;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  overflow: hidden;
+}
+.filter_checklist .filter_form .toggler {
+  color: var(--btn);
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 17px;
+  cursor: pointer;
+}
+.filter_more {
+  width: 100%;
+}
+.filter_more_btn {
+  width: 100%;
+  color: var(--btn);
+  background-color: var(--light_back);
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+}
+.filter_more_btn:hover {
+  background-color: var(--btn);
+  color: #fff;
+}
+.filter_more_btn:active {
+  -webkit-transform: scale(0.97);
+      -ms-transform: scale(0.97);
+          transform: scale(0.97);
+}
+
+@media (max-width: 1215px) {
+  .filter {
+    display: none;
   }
 }
 .header {
@@ -2346,5 +2503,43 @@ body {
   }
   .footer__copy {
     margin-bottom: 15px;
+  }
+}
+.main_content {
+  width: 100%;
+}
+.main_content_wr {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.main_content .section_title {
+  margin-bottom: 30px;
+}
+.main_content .list {
+  max-width: 910px;
+}
+.main_content .list .product_list {
+  padding: 0;
+}
+.main_content .list .product_list .product {
+  max-width: unset;
+  width: 23%;
+}
+
+@media (max-width: 1215px) {
+  .main_content .list {
+    max-width: unset;
+  }
+  .main_content .list .product_list {
+    gap: 2%;
+  }
+  .main_content .list .product_list .product {
+    width: 49%;
+    max-width: unset;
   }
 }
