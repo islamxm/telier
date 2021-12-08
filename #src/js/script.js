@@ -53,6 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if(menuTrigger) {
         menuTrigger.addEventListener('click', (e) => {
+            hideTabContent();
             menuTrigger.classList.toggle('active');
 
             mainCatalog.classList.toggle('active');
@@ -144,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
             hideTabContent();
             showTabContent();
         } else {
-            hideTabContent();
+            // hideTabContent();
         }
     })
 
