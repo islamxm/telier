@@ -180,6 +180,7 @@
 @media (max-width: 1215px) {
 
 	.filter {
+		overflow-x: hidden !important;
 		padding-top: 10px;
 		&_close {
 			display:flex;

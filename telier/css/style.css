@@ -1158,6 +1158,7 @@ body {
   font-weight: 400;
   color: var(--text);
   font-family: "Gilroy";
+  overflow-x: hidden !important;
 }
 
 .no-scroll {
@@ -1165,6 +1166,7 @@ body {
 }
 
 .main {
+  overflow-x: hidden !important;
   z-index: 0;
 }
 
@@ -1183,6 +1185,7 @@ body {
   margin: 0 auto;
   width: 100%;
   overflow: hidden;
+  overflow-x: hidden !important;
 }
 
 @media (max-width: 1215px) {
@@ -1990,6 +1993,7 @@ body {
 
 @media (max-width: 1215px) {
   .filter {
+    overflow-x: hidden !important;
     padding-top: 10px;
     background-color: #fff;
     -webkit-transition: all 0.2s ease;
@@ -2952,8 +2956,10 @@ body {
 .main_content {
   padding: 0 10px;
   width: 100%;
+  overflow-x: hidden !important;
 }
 .main_content_wr {
+  overflow-x: hidden !important;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
