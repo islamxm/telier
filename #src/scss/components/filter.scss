@@ -153,6 +153,15 @@
 			}
 		}
 	}
+
+	&_hidden {
+		
+		&_list {
+			height: 0;
+			overflow: hidden;
+			@include ease-02;
+		}
+	}
 }
 
 @media (max-width: 1215px) {

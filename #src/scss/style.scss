@@ -1,5 +1,6 @@
 //LIBS
 @import './libs/swiper.scss';
+@import './libs/nouislider.scss';
 
 //OVERALL
 @import './main/vars.scss';
@@ -17,6 +18,7 @@
 @import './components/category-item.scss';
 @import './components/mainform.scss';
 @import './components/filter.scss';
+@import './components/range.scss';
 
 //BLOCKS
 @import './blocks/header.scss';

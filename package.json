@@ -37,6 +37,8 @@
     ">1%"
   ],
   "dependencies": {
-    "micromodal": "^0.4.10"
+    "micromodal": "^0.4.10",
+    "nouislider": "^15.5.0",
+    "wnumb": "^1.2.0"
   }
 }

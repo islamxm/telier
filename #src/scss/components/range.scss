@@ -1,0 +1,76 @@
+.range_block {
+	margin-bottom: 28px;
+	padding-right: 10px;
+	.range_wr {
+
+		// padding: 0 20px;
+		margin-bottom: 12px;
+		.range {
+			border: none;
+			border-radius: 29px;
+			height: 3px;
+
+			.noUi-connect {
+				background-color: var(--btn);
+			}
+			.noUi-origin {
+
+				.noUi-handle {
+					width: 9px;
+					height: 9px;
+					top: calc(50% - 4px);
+					right: -4.5px;
+					border-radius: 100%;
+					cursor: pointer;
+					box-shadow: none;
+					@include ease-02;
+					&:hover {
+						background-color: var(--btn);
+						border-color: var(--btn);
+						transform: scale(1.25);
+					}
+
+
+					&:before {
+						display: none;
+
+					}
+
+					&:after {
+						display: none;
+					}
+
+
+				}
+
+				.noUi-handle-lower {
+					// right: 0;
+					// top: calc(50% - 4px);
+				}
+
+				.noUi-handle-upper {
+					// right: 0;
+					// top: calc(50% - 4px);
+				}
+			}
+		}
+	}
+
+	.range_values {
+		display: flex;
+		gap: 18px;
+		div	{
+			width: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 8px 2px;
+			background-color: var(--light_back);
+			border-radius: 4px;
+			color:#3D5165;
+			font-weight: 500;
+		}
+	}
+
+
+}

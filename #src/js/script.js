@@ -1,4 +1,6 @@
 import Swiper from './libs/swiper';
+import * as noUiSlider from 'nouislider';
+import wNumb from 'wnumb';
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -72,21 +74,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
             mainCatalog.classList.toggle('active');
 
-            // if(mainCatalog.classList.contains('active')) {
-            //     document.body.classList.add('no-scroll');
-            // } else {
-            //     document.body.classList.remove('no-scroll');
-            // }
-
             if(window.innerWidth < 1215 && mainCatalog.classList.contains('active')) {
                 const header = document.querySelector('.header');
                 document.body.classList.add('no-scroll');
+                
                 mainCatalog.style.cssText = `height: calc(100vh - ${header.clientHeight}px + 10px)`;
             
             } else {
                 document.body.classList.remove('no-scroll');
                 showTabContent();
                 // mainCatalog.style.cssText = 'height: 0px';
+            }
+            if(window.innerWidth < 1215) {
+                hideTabContent();
             }
         });
     }
@@ -98,7 +98,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 mainCatalog.style.cssText = `height: calc(100vh - ${header.clientHeight}px + 10px)`;
             } else {
                 document.body.classList.remove('no-scroll');
-                // mainCatalog.style.cssText = 'height: 0px';
                 showTabContent();
             }
     })
@@ -133,34 +132,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 });
             })
-            // dropDownItem.addEventListener('click', (e) => {
-            //     let dropDownList = e.currentTarget.querySelector(itemListQuery);
-            //     let target = e.target;
-
-            //     if(target.hasAttribute('data-droplistitem')) {
-            //         dropDownItem.classList.remove('active');
-            //     }
-            //     if(target && e.target.hasAttribute('data-drophead')) {
-            //         dropDownItem.classList.toggle('active');
-
-            //         if(dropDownItem.classList.contains('active')) {
-            //             dropDownList.style.height = `${dropDownList.scrollHeight}px`;
-            //         }
-            //         if(!dropDownItem.classList.contains('active')) {
-            //             dropDownList.style.height = `0px`;
-            //         }
-            //     }
-
-            // });
         }
     }
 
 
-
-    
-
-    // hideTabContent();
-    // showTabContent();
 
     if(window.innerWidth > 1215) {
         hideTabContent();
@@ -188,7 +163,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             })
         }
-    })
+    });
+
     tabContentCloseBtn.forEach(i => {
         i.addEventListener('click', hideTabContent);
     });
@@ -217,11 +193,52 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 
-    
+
+    /*RangeS Slider*/
+    const rangeSlider = document.querySelector('#rangeSlider');
+    const sliders = document.querySelectorAll('.range');
+
+    const valueBlock = document.querySelector('#valueBlock');
+
+    if(sliders) {
+        sliders.forEach(i => {
+            noUiSlider.create(i, {
+                start: [1, 512],
+                connect: true,
+                range: {
+                    'min': 1,
+                    'max': 512,
+                },
+                step:1,
+                tooltips: false,
+                format: {
+                    from: function(value) {
+                        return parseInt(value)
+                    },
+                    to: function(value) {
+                        return parseInt(value)  
+                    }
+                }
+                
+            })
+
+            i.noUiSlider.on('update', function(values, handle = 0) {
+                valueBlock.innerHTML = `от ${values[0]}`
+            })
+
+            i.noUiSlider.on('update', function(values, handle = 1) {
+                valueBlock1.innerHTML = `до ${values[1]}`
+            }) 
+        })
+
+
+    }
+
  
     dropDown('.header__main_search_drop', '.header__main_search_drop_list');
     dropDown('.filter_form', '.hide_list');
-    dropDown('.category', '.filter_category_list')
+    dropDown('.category', '.filter_category_list');
+    dropDown('.filter_hidden', '.filter_hidden_list');
 });
 
 
