@@ -24,8 +24,19 @@
                 <div class="main_content">
                     <h2 class="section_title">Товары по акции</h2>
                     <div class="main_content_wr">
+                        
+
+
                         <aside class="filter">
-                            <div class="filter_category">
+                            <div class="filter_close">
+                                <button>
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.96967 3.96967C4.26256 3.67678 4.73744 3.67678 5.03033 3.96967L9 7.93934L12.9697 3.96967C13.2626 3.67678 13.7374 3.67678 14.0303 3.96967C14.3232 4.26256 14.3232 4.73744 14.0303 5.03033L10.0607 9L14.0303 12.9697C14.3232 13.2626 14.3232 13.7374 14.0303 14.0303C13.7374 14.3232 13.2626 14.3232 12.9697 14.0303L9 10.0607L5.03033 14.0303C4.73744 14.3232 4.26256 14.3232 3.96967 14.0303C3.67678 13.7374 3.67678 13.2626 3.96967 12.9697L7.93934 9L3.96967 5.03033C3.67678 4.73744 3.67678 4.26256 3.96967 3.96967Z" fill="#000"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="filter_body">
+                                <div class="filter_category">
                                 <h3 class="filter_title">Категория</h3>
                                 <div class="category">
                                     <div class="filter_category_i" data-drophead>Электроника</div>
@@ -87,7 +98,6 @@
                                     
                                 </form>
                             </div>
-
                             <div class="range_block">
                                 <h3 class="filter_title">Встроенная память, ГБ</h3>
                                 <div class="range_wr">
@@ -97,38 +107,36 @@
                                     
                                 </div>
                                 <div class="range_values">
-                                        <div id="valueBlock"></div>
-                                        <div id="valueBlock1"></div>
-                                        
-                                    </div>
+                                    <div id="valueBlock"></div>
+                                    <div id="valueBlock1"></div>
+                                    
+                                </div>
                             </div>
-
                             <div class="filter_hidden">
                                 <div class="filter_hidden_list">
                                     <div class="filter_checklist">
-                                    <h3 class="filter_title">Бренды</h3>
-                                    <form class="filter_form">
-                                        <div class="filter_form_item">
-                                            <input id="11" type="checkbox">
-                                            <label for="11" class="filter_name">ID</label>
-                                        </div>
-                                        <div class="filter_form_item">
-                                            <input id="12" type="checkbox">
-                                            <label for="12" class="filter_name">Utaupia</label>
-                                        </div>
-                                        <div class="filter_form_item">
-                                            <input id="13" type="checkbox">
-                                            <label for="13" class="filter_name">TopMag</label>
-                                        </div>
-                                        <div class="filter_form_item">
-                                            <input id="14" type="checkbox">
-                                            <label for="14" class="filter_name">Almoa</label>
-                                        </div>
-                                        <div class="filter_form_item">
-                                            <input id="15" type="checkbox">
-                                            <label for="15" class="filter_name">MOCOLL</label>
-                                        </div>
-                                        <div class="hide_list">
+                                        <h3 class="filter_title">Бренды</h3>
+                                        <form class="filter_form">
+                                            <div class="filter_form_item">
+                                                <input id="11" type="checkbox">
+                                                <label for="11" class="filter_name">ID</label>
+                                            </div>
+                                            <div class="filter_form_item">
+                                                <input id="12" type="checkbox">
+                                                <label for="12" class="filter_name">Utaupia</label>
+                                            </div>
+                                            <div class="filter_form_item">
+                                                <input id="13" type="checkbox">
+                                                <label for="13" class="filter_name">TopMag</label>
+                                            </div>
+                                            <div class="filter_form_item">
+                                                <input id="14" type="checkbox">
+                                                <label for="14" class="filter_name">Almoa</label>
+                                            </div>
+                                            <div class="filter_form_item">
+                                                <input id="15" type="checkbox">
+                                                <label for="15" class="filter_name">MOCOLL</label>
+                                            </div>
                                             <div class="filter_form_item">
                                                 <input id="16" type="checkbox">
                                                 <label for="16" class="filter_name">ID</label>
@@ -149,21 +157,26 @@
                                                 <input id="20" type="checkbox">
                                                 <label for="20" class="filter_name">MOCOLL</label>
                                             </div>
-                                        </div>
-                                        <div class="toggler" data-drophead>Показать все</div>
-                                        
-                                    </form>
-                                </div>
-                                
+                                            <!-- <div class="toggler" data-drophead>Показать все</div>
+                                             -->
+                                        </form>
+
+                                    </div>
+                                    
                                 </div>
                                 <div class="filter_more">
-                                <button class="filter_more_btn" data-drophead>Все фильры</button>
+                                        <button class="filter_more_btn" data-dropheadall>Все фильры</button>
+                                    </div>
+
+                                
                             </div>
                             </div>
-                            
                             
                         </aside>
                         <section class="list">
+                            <button class="filter_btn">
+                                <img src="./img/filter.png" alt="">
+                            </button>
                             <div class="product_list">
                                 <div class="product">
                                     <a hef="#" class="product_img">
@@ -551,6 +564,9 @@
                                     </div>
                                     <div class="product_ex">-19%</div>
                                 </div>
+                            </div>
+                            <div class="list_more">
+                                <button class="btn">Показать еще</button>
                             </div>
                         </section>
                     </div>

@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     if(target.hasAttribute('data-droplistitem')) {
                         i.classList.remove('active');
                     }
-                    if(target && e.target.hasAttribute('data-drophead')) {
+                    if(target && e.target.hasAttribute('data-drophead') || e.target.hasAttribute('data-dropheadall')) {
                         i.classList.toggle('active');
 
                         if(i.classList.contains('active')) {
@@ -233,6 +233,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     }
+
+
+    /*Filter btn*/
+    const filterBtn = document.querySelector('.filter_btn');
+    const filter = document.querySelector('.filter');
+    const filterClose = document.querySelector('.filter_close');
+    filterBtn.addEventListener('click', (e) => {
+        filter.classList.add('active');
+        document.body.classList.add('no-scroll');
+    });
+
+    filterClose.addEventListener('click', ()=> {
+        filter.classList.remove('active');
+        document.body.classList.remove('no-scroll');
+    })
+
+
 
  
     dropDown('.header__main_search_drop', '.header__main_search_drop_list');
