@@ -1,6 +1,10 @@
 .range_block {
 	margin-bottom: 28px;
 	padding-right: 10px;
+
+	.filter_title {
+		margin-bottom: 10px;
+	}
 	.range_wr {
 
 		// padding: 0 20px;
@@ -16,10 +20,10 @@
 			.noUi-origin {
 
 				.noUi-handle {
-					width: 9px;
-					height: 9px;
-					top: calc(50% - 4px);
-					right: -4.5px;
+					width: 16px;
+					height: 16px;
+					top: calc(50% - 8px);
+					right: -8px;
 					border-radius: 100%;
 					cursor: pointer;
 					box-shadow: none;
@@ -73,4 +77,24 @@
 	}
 
 
+}
+
+
+@media (max-width: 1215px) {
+
+	.range_block {
+
+		.range_wr {
+
+			.range {
+
+				.noUi-origin {
+
+					.noUi-handle {
+
+					}
+				}
+			}
+		}
+	}
 }

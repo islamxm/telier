@@ -198,6 +198,24 @@
 		// overflow-y: scroll !important;
 
 
+		&_more {
+
+			&_btn {
+				
+				&:hover {
+					background-color: var(--light_back);
+					color: var(--btn);
+				}
+
+				&:active {
+					background-color: var(--light_back);
+					color: var(--btn);
+				}
+			}
+
+		}
+
+
 		&_body {
 			width: 100% !important;
 			overflow-y: scroll;

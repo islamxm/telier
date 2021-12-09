@@ -387,6 +387,14 @@
             &_cat {
                 padding: 5px 6px !important;
 
+                &:hover {
+                    background-color: var(--btn);
+                }
+
+                &:active {
+                    background-color: var(--btn);
+                }
+
 
                 span {
                     display: none;

@@ -2013,6 +2013,14 @@ body {
             justify-content: flex-end;
     padding-right: 10px;
   }
+  .filter_more_btn:hover {
+    background-color: var(--light_back);
+    color: var(--btn);
+  }
+  .filter_more_btn:active {
+    background-color: var(--light_back);
+    color: var(--btn);
+  }
   .filter_body {
     width: 100% !important;
     overflow-y: scroll;
@@ -2031,6 +2039,9 @@ body {
   margin-bottom: 28px;
   padding-right: 10px;
 }
+.range_block .filter_title {
+  margin-bottom: 10px;
+}
 .range_block .range_wr {
   margin-bottom: 12px;
 }
@@ -2043,10 +2054,10 @@ body {
   background-color: var(--btn);
 }
 .range_block .range_wr .range .noUi-origin .noUi-handle {
-  width: 9px;
-  height: 9px;
-  top: calc(50% - 4px);
-  right: -4.5px;
+  width: 16px;
+  height: 16px;
+  top: calc(50% - 8px);
+  right: -8px;
   border-radius: 100%;
   cursor: pointer;
   -webkit-box-shadow: none;
@@ -2426,6 +2437,12 @@ body {
   }
   .header__main_cat {
     padding: 5px 6px !important;
+  }
+  .header__main_cat:hover {
+    background-color: var(--btn);
+  }
+  .header__main_cat:active {
+    background-color: var(--btn);
   }
   .header__main_cat span {
     display: none;

@@ -71,18 +71,21 @@ document.addEventListener('DOMContentLoaded', () => {
         menuTrigger.addEventListener('click', (e) => {
             hideTabContent();
             menuTrigger.classList.toggle('active');
-
+            
             mainCatalog.classList.toggle('active');
 
             if(window.innerWidth < 1215 && mainCatalog.classList.contains('active')) {
                 const header = document.querySelector('.header');
                 document.body.classList.add('no-scroll');
+                menuTrigger.style.backgroundColor = '#0047FF';
                 
                 mainCatalog.style.cssText = `height: calc(100vh - ${header.clientHeight}px + 10px)`;
             
             } else {
                 document.body.classList.remove('no-scroll');
                 showTabContent();
+                
+                menuTrigger.style.backgroundColor = '#4979f3';
                 // mainCatalog.style.cssText = 'height: 0px';
             }
             if(window.innerWidth < 1215) {
@@ -107,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    function dropDown(itemQuery, itemListQuery) {
+    function dropDown(itemQuery, itemListQuery, itemNum, closed, opened) {
         let dropDownItem = document.querySelectorAll(itemQuery);
 
         if(dropDownItem) {
@@ -115,6 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 i.addEventListener('click', (e) => {
                     let dropDownList = e.currentTarget.querySelector(itemListQuery);
                     let target = e.target;
+                    let btn = e.currentTarget.querySelector(`[data-change = "${itemNum}"]`)
 
                     if(target.hasAttribute('data-droplistitem')) {
                         i.classList.remove('active');
@@ -127,6 +131,13 @@ document.addEventListener('DOMContentLoaded', () => {
                         }
                         if(!i.classList.contains('active')) {
                             dropDownList.style.height = `0px`;
+                        }
+
+                        if(i.classList.contains('active') && e.target.hasAttribute('data-change', itemNum)) {
+                            btn.innerHTML = opened;
+                        } 
+                        if(!i.classList.contains('active') && e.target.hasAttribute('data-change', itemNum)) {
+                            btn.innerHTML = closed;
                         }
                     }
 
@@ -253,9 +264,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
  
     dropDown('.header__main_search_drop', '.header__main_search_drop_list');
-    dropDown('.filter_form', '.hide_list');
+    dropDown('.filter_form', '.hide_list', '1', 'Показать все', 'Скрыть');
     dropDown('.category', '.filter_category_list');
-    dropDown('.filter_hidden', '.filter_hidden_list');
+    dropDown('.filter_hidden', '.filter_hidden_list', '2', 'Все фильтры', 'Скрыть');
 });
 
 
