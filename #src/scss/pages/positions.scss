@@ -44,9 +44,11 @@
 @media (max-width: 1215px) {
 
 	.main_content {
-
+		touch-action: none;
+        -ms-touch-action: none;
 		&_wr {
-
+			touch-action: none;
+        -ms-touch-action: none;
 		}
 
 		.list {

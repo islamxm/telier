@@ -45,6 +45,12 @@ body {
     font-family: 'Gilroy';
     overflow-x: hidden !important;
 }
+@media (max-width: 1215px) {
+    body {
+        touch-action: none;
+        -ms-touch-action: none;
+    }
+}
 
 .no-scroll {
     overflow: hidden !important;
@@ -58,6 +64,8 @@ body {
 @media (max-width: 1215px) {
     .main {
         padding-top: 110px;
+        touch-action: none;
+        -ms-touch-action: none;
 
     }
 }
