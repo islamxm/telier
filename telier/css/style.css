@@ -1179,8 +1179,6 @@ body {
 @media (max-width: 1215px) {
   .main {
     padding-top: 110px;
-    touch-action: none;
-    -ms-touch-action: none;
   }
 }
 @media (max-width: 376px) {
@@ -1279,6 +1277,16 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #3D5165 !important;
+}
+.path_item {
+  display: inline-block;
+  padding: 0 5px;
+  color: #3D5165;
+  font-weight: 500;
 }
 @font-face {
   font-family: "Gilroy";
@@ -3016,10 +3024,6 @@ body {
 
 @media (max-width: 1215px) {
   .main_content {
-    touch-action: none;
-    -ms-touch-action: none;
-  }
-  .main_content_wr {
     touch-action: none;
     -ms-touch-action: none;
   }

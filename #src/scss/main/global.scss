@@ -64,8 +64,8 @@ body {
 @media (max-width: 1215px) {
     .main {
         padding-top: 110px;
-        touch-action: none;
-        -ms-touch-action: none;
+        // touch-action: none;
+        // -ms-touch-action: none;
 
     }
 }
@@ -133,12 +133,13 @@ body {
 @media (max-width: 1215px) {
 
     .section__top {
+        margin-bottom: 15px;
         
         &_link {
             font-size: 10px;
             line-height: 12px;
         }
-        margin-bottom: 15px;
+        
     }
 }
 
@@ -167,10 +168,15 @@ body {
 
     &_list {
         display: flex;
+        align-items: center;
+        color: #3D5165 !important;
     }
 
     &_item {
-
+        display: inline-block;
+        padding: 0 5px;
+        color: #3D5165;
+        font-weight: 500;   
     }
 
     &_item.path_item_current {
