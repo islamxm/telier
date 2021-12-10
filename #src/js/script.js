@@ -20,10 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const prevSwiper = new Swiper('.prev__in', {
-        // autoplay: {
-        //     delay: 5000,
+        autoplay: {
+            delay: 5000,
 
-        // },
+        },
         loop: true,
         speed: 1000,
         spaceBetween: 36,
