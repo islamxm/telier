@@ -502,3 +502,33 @@
         }
     }
 }
+
+@media (max-width: 400px) {
+    .header {
+
+
+        &__main {
+            &_search {
+                max-width: 200px;
+                &_input {
+
+                }
+            }
+
+            &_btns {
+
+                .main_btn {
+                    margin-right: 10px !important;
+
+                    svg {
+                        margin: 0 !important;
+                    }
+
+                    &:last-child {
+                        margin-right: 0 !important;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1692,6 +1692,12 @@ body {
     padding: 10px;
   }
 }
+@media (max-width: 360px) {
+  .product .product_name {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
 .category_item {
   border-radius: 12px;
   background: rgba(250, 250, 250, 0.5);
@@ -2559,6 +2565,20 @@ body {
     top: 0;
     right: 10px;
     cursor: pointer;
+  }
+}
+@media (max-width: 400px) {
+  .header__main_search {
+    max-width: 200px;
+  }
+  .header__main_btns .main_btn {
+    margin-right: 10px !important;
+  }
+  .header__main_btns .main_btn svg {
+    margin: 0 !important;
+  }
+  .header__main_btns .main_btn:last-child {
+    margin-right: 0 !important;
   }
 }
 .prev {
