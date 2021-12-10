@@ -182,12 +182,6 @@
 	.filter {
 		overflow-x: hidden !important;
 		padding-top: 10px;
-		&_close {
-			display:flex;
-			justify-content: flex-end;
-			padding-right: 10px;
-
-		}
 		background-color: #fff;
 		@include ease-02;
 		transform: translate(-100%);
@@ -197,6 +191,17 @@
 		width: 100%;
 		height: 100%;
 		// overflow-y: scroll !important;
+		touch-action: none;
+        -ms-touch-action: none;
+
+
+		&_close {
+			display:flex;
+			justify-content: flex-end;
+			padding-right: 10px;
+
+		}
+		
 
 
 		&_more {

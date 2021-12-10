@@ -49,6 +49,18 @@
 		&_wr {
 			// touch-action: none;
    //      -ms-touch-action: none;
+		   .filter_btn {
+				display: block;
+				width: 25px;
+				height: 25px;
+				img {
+					max-width: 100%;
+					max-width: 100%;
+					object-fit: contain;
+				}	
+
+
+			}
 		}
 
 		.list {
@@ -62,6 +74,13 @@
 		            max-width: unset;
 		        }
 		    }
+
+		    &_more {
+					margin: 0 0 40px 0;
+					.btn {
+						padding: 12px 40px !important;
+					}
+				}
 		}
 	}
 }
@@ -71,29 +90,13 @@
 
 			&_wr {
 
-				.filter_btn {
-					display: block;
-					width: 25px;
-					height: 25px;
-					img {
-						max-width: 100%;
-						max-width: 100%;
-						object-fit: contain;
-					}	
-
-
-				}
+				
 			}
 
 			.list {
 
 
-				&_more {
-					margin: 0 0 40px 0;
-					.btn {
-						padding: 12px 40px !important;
-					}
-				}
+				
 			}
 
 	}
