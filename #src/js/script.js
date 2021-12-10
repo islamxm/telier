@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if(window.innerWidth < 1215 && mainCatalog.classList.contains('active')) {
                 const header = document.querySelector('.header');
                 document.body.classList.add('no-scroll');
-                menuTrigger.style.backgroundColor = '#0047FF';
+                menuTrigger.style.backgroundColor = '#00008b';
                 
                 mainCatalog.style.cssText = `height: calc(100vh - ${header.clientHeight}px + 10px)`;
             
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.body.classList.remove('no-scroll');
                 showTabContent();
                 
-                menuTrigger.style.backgroundColor = '#4979f3';
+                menuTrigger.style.backgroundColor = '#0047FF';
                 // mainCatalog.style.cssText = 'height: 0px';
             }
             if(window.innerWidth < 1215) {

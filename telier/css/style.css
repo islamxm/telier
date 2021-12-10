@@ -2041,12 +2041,12 @@ body {
 }
 .range_block {
   margin-bottom: 28px;
-  padding-right: 10px;
 }
 .range_block .filter_title {
   margin-bottom: 10px;
 }
 .range_block .range_wr {
+  padding: 0 10px;
   margin-bottom: 12px;
 }
 .range_block .range_wr .range {
@@ -2088,6 +2088,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   gap: 18px;
+  padding: 0 10px;
 }
 .range_block .range_values div {
   width: 50%;

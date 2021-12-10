@@ -1,12 +1,11 @@
 .range_block {
 	margin-bottom: 28px;
-	padding-right: 10px;
-
+	
 	.filter_title {
 		margin-bottom: 10px;
 	}
 	.range_wr {
-
+		padding: 0 10px;
 		// padding: 0 20px;
 		margin-bottom: 12px;
 		.range {
@@ -63,6 +62,7 @@
 	.range_values {
 		display: flex;
 		gap: 18px;
+		padding: 0 10px;
 		div	{
 			width: 50%;
 			display: flex;
