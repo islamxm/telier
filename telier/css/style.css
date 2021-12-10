@@ -1175,6 +1175,11 @@ body {
     padding-top: 110px;
   }
 }
+@media (max-width: 376px) {
+  .main {
+    padding-top: 140px;
+  }
+}
 .hide {
   display: none !important;
 }
@@ -2030,6 +2035,7 @@ body {
     overflow-y: scroll;
     max-height: calc(100vh - 20px);
     padding-top: 0;
+    overflow-x: hidden !important;
   }
 
   .filter.active {
@@ -2037,6 +2043,7 @@ body {
     -webkit-transform: translatex(0);
         -ms-transform: translatex(0);
             transform: translatex(0);
+    overflow-x: hidden !important;
   }
 }
 .range_block {

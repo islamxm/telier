@@ -61,6 +61,12 @@ body {
 
     }
 }
+@media (max-width: 376px) {
+    .main {
+        padding-top: 140px;
+
+    }
+}
 
 .hide {
     display: none !important;
