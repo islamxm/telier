@@ -164,21 +164,26 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     })
 
-    tabsParent.addEventListener('click', (e) => {
-        let tar = e.target;
-        if(tar && tar.classList.contains('header__menu_aside_item')) {
-            tabs.forEach((i, index) => {
-                if(tar == i) {
-                    hideTabContent();
-                    showTabContent(index);
-                }
-            })
-        }
-    });
+    if(tabsParent) {
+        tabsParent.addEventListener('click', (e) => {
+            let tar = e.target;
+            if(tar && tar.classList.contains('header__menu_aside_item')) {
+                tabs.forEach((i, index) => {
+                    if(tar == i) {
+                        hideTabContent();
+                        showTabContent(index);
+                    }
+                })
+            }
+        });
+    }
 
-    tabContentCloseBtn.forEach(i => {
-        i.addEventListener('click', hideTabContent);
-    });
+    if(tabContentCloseBtn) {
+        tabContentCloseBtn.forEach(i => {
+            i.addEventListener('click', hideTabContent);
+        }); 
+    }
+    
 
 
 
@@ -250,15 +255,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const filterBtn = document.querySelector('.filter_btn');
     const filter = document.querySelector('.filter');
     const filterClose = document.querySelector('.filter_close');
-    filterBtn.addEventListener('click', (e) => {
-        filter.classList.add('active');
-        document.body.classList.add('no-scroll');
-    });
+    
+    if(filterBtn) {
+        filterBtn.addEventListener('click', (e) => {
+            filter.classList.add('active');
+            document.body.classList.add('no-scroll');
+        });
 
-    filterClose.addEventListener('click', ()=> {
-        filter.classList.remove('active');
-        document.body.classList.remove('no-scroll');
-    })
+        filterClose.addEventListener('click', ()=> {
+            filter.classList.remove('active');
+            document.body.classList.remove('no-scroll');
+        })
+    }
 
 
 
