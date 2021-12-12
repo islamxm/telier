@@ -71,7 +71,7 @@ body {
 }
 @media (max-width: 376px) {
     .main {
-        padding-top: 140px;
+        padding-top: 125px;
 
     }
 }
@@ -163,7 +163,7 @@ body {
 }
 
 .path {
-    padding: 15px 10px;
+    padding: 15px 0px;
     width: 100%;
 
     &_list {
@@ -181,5 +181,20 @@ body {
 
     &_item.path_item_current {
 
+    }
+}
+
+@media (max-width: 1215px) {
+    .path {
+        padding: 15px 10px;
+
+        &_list {
+            flex-wrap: wrap;
+        }
+        &_item {
+            font-size: 12px;
+            line-height: 14px;
+            white-space: nowrap;
+        }
     }
 }

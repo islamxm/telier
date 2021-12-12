@@ -1,6 +1,7 @@
 import Swiper from './libs/swiper';
 import * as noUiSlider from 'nouislider';
 import wNumb from 'wnumb';
+import { Fancybox, Carousel, Panzoom } from "@fancyapps/ui";
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -203,18 +204,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 if(!i.classList.contains('active')) {
                     i.innerHTML = `<svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 1.167C0 0.522484 0.522483 0 1.167 0H8.169C8.81351 0 9.336 0.522483 9.336 1.167V11.0865C9.336 11.3051 9.21384 11.5053 9.0195 11.6053C8.82515 11.7053 8.59121 11.6884 8.41335 11.5613L4.668 8.88606L0.922652 11.5613C0.744793 11.6884 0.510848 11.7053 0.316501 11.6053C0.122154 11.5053 0 11.3051 0 11.0865V1.167ZM8.169 1.167L1.167 1.167V9.95265L4.32885 7.69419C4.53173 7.54927 4.80427 7.54927 5.00715 7.69419L8.169 9.95265V1.167Z" fill="#242424"/>
-                    </svg>`
+                    </svg>`;
                 }
-            })
-        })
+            });
+        });
     }
 
 
     /*RangeS Slider*/
-    const rangeSlider = document.querySelector('#rangeSlider');
+    // const rangeSlider = document.querySelector('#rangeSlider');
     const sliders = document.querySelectorAll('.range');
 
     const valueBlock = document.querySelector('#valueBlock');
+    const valueBlock1 = document.querySelector('#valueBlock1');
 
     if(sliders) {
         sliders.forEach(i => {
@@ -268,6 +270,62 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 
+    const mainCarouselSelect = document.querySelector("#mainCarousel");
+
+    if(mainCarouselSelect) {
+        const mainCarousel = new Carousel(mainCarouselSelect, {
+            Dots: false,
+            Navigation: true
+        });
+
+        const thumbCarousel = new Carousel(document.querySelector("#thumbCarousel"), {
+            Sync: {
+                target: mainCarousel,
+                friction: 0,
+            },
+            Dots: false,
+            // Navigation: false,
+            center: false,
+            // slidesPerPage: 1,
+            infinite: false,
+        });
+
+        Fancybox.bind('[data-fancybox="gallery"]', {
+            Carousel: {
+            on: {
+                change: (that) => {
+                mainCarousel.slideTo(mainCarousel.findPageForSlide(that.page), {
+                    friction: 0,
+                });
+                },
+            },
+            },
+        });
+    }
+    
+
+    const productReviewsSelect = document.querySelector("#productReviews");
+    
+    
+
+    if(productReviewsSelect) {
+        const productReviews = new Carousel(productReviewsSelect, {
+            Dots:false,
+            center: false,
+            infinite: false
+        });
+
+        const revSlider = new Carousel(document.querySelector('.reviews__body_item_content'), {
+            center: false,
+            Dots: false,
+            infinite: false
+        });
+    }
+
+
+    
+
+    
 
 
  
@@ -275,6 +333,8 @@ document.addEventListener('DOMContentLoaded', () => {
     dropDown('.filter_form', '.hide_list', '1', 'Показать все', 'Скрыть');
     dropDown('.category', '.filter_category_list');
     dropDown('.filter_hidden', '.filter_hidden_list', '2', 'Все фильтры', 'Скрыть');
+    dropDown('.dropdown', '.dropdown_list');
+
 });
 
 

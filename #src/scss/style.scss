@@ -19,6 +19,9 @@
 @import './components/mainform.scss';
 @import './components/filter.scss';
 @import './components/range.scss';
+@import './components/rating.scss';
+@import './components/product-condition.scss';
+@import './components/reviews.scss';
 
 //BLOCKS
 @import './blocks/header.scss';
@@ -35,4 +38,6 @@
 
 //PAGES
 @import './pages/positions.scss';
+@import './pages/product.scss';
+@import './pages/basket.scss';
 

@@ -1,41 +1,43 @@
-.main_content {
-	padding: 0 10px;
-	width: 100%;
-	overflow-x: hidden !important;
-	&_wr {
-		overflow-x: hidden !important;
+#products {
+	.main_content {
+		padding: 0 10px;
 		width: 100%;
-		display: flex;
-		justify-content: space-between;
-
-		.filter_btn {
-			display: none;	
-		}
-	}
-
-	.section_title {
-		margin-bottom: 30px;
-	}
-
-	.list {
-		max-width: 910px;
-
-		.product_list {
-			padding: 0;
-
-			.product {
-				max-width: unset;
-				width: 23%;
+		overflow-x: hidden !important;
+		&_wr {
+			overflow-x: hidden !important;
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+	
+			.filter_btn {
+				display: none;	
 			}
 		}
-
-		&_more {
-			display: flex;
-			justify-content: center;
-			margin: 30px 0 60px 0;
-
-			.btn {
-				padding: 14px 50px;
+	
+		.section_title {
+			margin-bottom: 30px;
+		}
+	
+		.list {
+			max-width: 910px;
+	
+			.product_list {
+				padding: 0;
+	
+				.product {
+					max-width: unset;
+					width: 23%;
+				}
+			}
+	
+			&_more {
+				display: flex;
+				justify-content: center;
+				margin: 30px 0 60px 0;
+	
+				.btn {
+					padding: 14px 50px;
+				}
 			}
 		}
 	}
@@ -43,50 +45,52 @@
 
 @media (max-width: 1215px) {
 
-	.main_content {
-		touch-action: none;
-        -ms-touch-action: none;
-		&_wr {
-			// touch-action: none;
-   //      -ms-touch-action: none;
-		   .filter_btn {
-				display: block;
-				width: 25px;
-				height: 25px;
-				img {
-					max-width: 100%;
-					max-width: 100%;
-					object-fit: contain;
-				}	
-
-
+	#products {
+		.main_content {
+			touch-action: none;
+			-ms-touch-action: none;
+			&_wr {
+	
+			   .filter_btn {
+					display: block;
+					width: 25px;
+					height: 25px;
+					img {
+						max-width: 100%;
+						max-width: 100%;
+						object-fit: contain;
+					}	
+	
+	
+				}
 			}
-		}
-
-		.list {
-			max-width: unset;
-
-			.product_list {
-		        gap: 2%;
-
-		        .product {
-		            width: 49%;
-		            max-width: unset;
-		        }
-		    }
-
-		    &_more {
-					margin: 0 0 40px 0;
-					.btn {
-						padding: 12px 40px !important;
+	
+			.list {
+				max-width: unset;
+	
+				.product_list {
+					gap: 2%;
+	
+					.product {
+						width: 49%;
+						max-width: unset;
 					}
 				}
+	
+				&_more {
+						margin: 0 0 40px 0;
+						.btn {
+							padding: 12px 40px !important;
+						}
+					}
+			}
 		}
 	}
 }
 
 @media (max-width: 1215px) {
-	.main_content {
+	#products {
+		.main_content {
 
 			&_wr {
 
@@ -95,9 +99,9 @@
 
 			.list {
 
-
-				
+	
 			}
 
+	}
 	}
 }

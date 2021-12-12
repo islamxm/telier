@@ -1,0 +1,255 @@
+.reviews {
+
+    .section_title {
+        margin-bottom: 17px;
+    }
+
+    &__content {
+
+        &_title {
+            margin-bottom: 18px;
+        }
+
+        &_list {
+            margin-bottom: 40px;
+            
+            &_item {
+                
+                width: 145px !important;
+                height: 168px;
+                border-radius: 8px;
+                overflow: hidden;
+                background-color: #ccc;
+                margin-right: 10px;
+
+                img {
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+
+                &:last-child {
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    &__body {
+
+        &_filter {
+            display: flex;
+            margin-bottom: 30px;
+
+            &_item {
+                cursor: pointer;
+                &:last-child {
+                    padding: 10px 20px;
+                }
+                &_head {
+                    padding: 10px 28px 10px 20px;
+                    display: block;
+                    background-color: var(--light_back);
+                    border-radius: 4px;
+                }
+
+                &_list {
+                    background-color: var(--light_back);
+                    &_item {
+                        padding: 10px 28px 10px 20px;
+                    }
+                }
+            }
+        }
+
+        &_list {
+
+        }
+
+        &_item {
+
+            &_head {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding-bottom: 12px;
+                border-bottom: 1px solid rgba(36, 36, 36, 0.05);
+                margin-bottom: 10px;
+
+                .profile {
+                    display: flex;
+                    align-items: center;
+
+                    &__img {
+                        width: 50px;
+                        height: 50px;
+                        background-color: var(--light_back);
+                        border-radius: 100%;
+                        margin-right: 23px;
+
+                        img {
+                            max-width: 100%;
+                            max-height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+
+                    &__descr {
+
+                        &_name {
+                            font-weight: 500;
+                            font-weight: 14px;
+                            line-height: 16px;
+                        }
+                    }
+                }
+
+                .date {
+                    color: var(--btn_dis);
+                }
+            }
+
+            &_prod {
+                color: var(--btn);
+                // font-size: 14px;
+                // line-height: 16px;
+                font-weight: 500;
+                margin-bottom: 11px;
+            }
+
+            &_list {
+                margin-bottom: 12px;
+
+                &_item {
+                    margin-bottom: 8px;
+
+                    .name {
+                        color: var(--btn_dis);
+                    }
+                }
+            }
+
+            &_text {
+                font-weight: 500;
+                margin-bottom: 20px;
+            }
+
+            &_content {
+                margin-bottom: 20px;
+
+                &_item {
+                    width: 145px !important;
+                    height: 168px;
+                    background-color: #ccc;
+                    border-radius: 8px;
+                    margin-right: 10px;
+
+                    img {
+                        max-width: 100%;
+                        max-height: 100%;
+                        object-fit: cover;
+                    }
+
+                    &:last-child {
+                        margin: 0;
+                    }
+                }
+            }
+
+            &_question {
+
+                &_title {
+                    font-weight: 600;
+                    margin-bottom: 14px;
+                }
+            }
+
+            &_questions {
+                display: flex;
+                gap: 10px;
+                .item {
+
+                    input {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        appearance: none;
+                        z-index: -1;
+                        opacity: 0;
+                        visibility: hidden;
+                        pointer-events: none;
+                    }
+
+                    label {
+                        display: block;
+                        padding: 10px 30px;
+                        border-radius: 4px;
+                        color: #4C4C4C;
+                        font-weight: 500;
+                        background-color: var(--light_back);
+                        cursor: pointer;
+                        @include ease-02;
+                        
+                        &:active {
+                            background-color: var(--btn);
+                            color: #fff;
+                        }
+                    }
+
+                    
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1215px) {
+
+    .reviews {
+        padding: 0 11px;    
+
+        &__body {
+
+            &_filter {
+
+                &_item {
+
+                    &_list {
+                        width: 110% !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+
+    .reviews {
+
+
+        &__content {
+            display: none;
+        }
+
+        &__body {
+
+            &_filter {
+                display: none;
+            }
+
+            &_item {
+                &_head {
+
+                    .date {
+                        display: none;
+                    }
+                }
+                &_text {
+                    font-size: 14px;
+                    line-height: 18px;
+                }
+            }
+        }
+    }
+}
