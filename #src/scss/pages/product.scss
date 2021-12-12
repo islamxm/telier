@@ -505,6 +505,32 @@
 
                         &_body {
                             margin: 0 auto;
+
+                            .carousel__nav {
+
+                                .carousel__button {
+                                    background-color: transparent;
+                                    border: 1px solid #ccc;
+                                    &:hover {
+                                        background-color: transparent;
+                                        svg {
+                                            path {
+                                                stroke: #ccc;
+                                            }
+                                        }
+                                    }
+
+                                    &:active {
+                                        background-color: #ccc;
+
+                                        svg {
+                                            path {
+                                                stroke: #fff;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                         }
 
                         &_thumbs {

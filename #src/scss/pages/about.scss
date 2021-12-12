@@ -1,0 +1,200 @@
+#about {
+    
+    .main__content {
+
+        .about {
+            background-color: var(--btn);
+            padding: 42px 0;
+
+            .container {
+                position: relative;
+
+                &:after {
+                    position: absolute;
+                    content: url('../img/about-1.png');
+                    top: 0;
+                    right: 210px;
+                }
+
+                &:before {
+                    position: absolute;
+                    content: url('../img/about-2.png');
+                    top: 164px;
+                    right: 0;
+                }
+            }
+            .section_title {
+                color: #fff;
+                font-size: 64px;
+                line-height: 76px;
+                margin-bottom: 30px;
+            }
+
+            .main__text {
+                font-weight: 500;
+                color: #fff;
+                font-size: 32px;
+                line-height: 37px;
+                margin-bottom: 50px;
+                max-width: 550px;
+            }
+
+            .extra__text {
+                padding: 5px;
+                background-color: var(--orange);
+                color: #fff;
+                border-radius: 5px;
+                max-width: 407px;
+            }
+        }
+
+        .about__body {
+            padding: 40px 0;
+
+            .section_title {
+                margin-bottom: 26px;
+            }
+
+            .about__body_item {
+                font-size: 18px;
+                line-height: 20px;
+                padding-left: 32px;
+                margin-bottom: 15px;
+                position: relative;
+                display: block;
+                font-weight: 500;
+
+                &:after {
+                    position: absolute;     
+                    top: 0;
+                    left: 0;
+                }
+                
+            }
+            .about__body_item.tel {
+                
+                &:after {
+                    content: url('../img/about-tel.svg');
+                }
+            }
+            .about__body_item.mail {
+                margin-bottom: 30px;
+                &:after {
+                    content: url('../img/about-mail.svg');
+                }
+            }
+
+            .about__social {
+                display: flex;
+                max-width: 150px;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-between;
+                .about__social_title {
+                    width: 100%;
+                    font-weight: 600;
+                    font-size: 18px;
+                    line-height: 20px;
+                    margin-bottom: 15px;
+                }
+
+                .about__social_item {
+
+                    svg {
+                        path {
+                            @include ease-02;
+                        }
+                    }
+                    &:hover {
+                        svg {
+                            path {
+                                fill: var(--orange);
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+@media (max-width: 1215px) {
+
+    #about {
+
+        .main__content {
+
+            .about {
+                padding: 42px 10px;
+
+                .container {
+
+                    &:after {
+                        display: none;
+                    }
+
+                    &:before {
+                        display: none;
+                    }
+                }
+                .section_title {
+                    font-size: 40px;
+                    line-height: 45px;
+                }
+
+                .main__text {
+                    font-size: 27px;
+                    line-height: 32px;  
+                }
+            }
+
+            .about__body {
+                padding: 40px 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    #about {
+
+        .main__content {
+
+            .about {
+               
+
+                
+                .section_title {
+                    font-size: 35px;
+                    line-height: 40px;
+                }
+
+                .main__text {
+                    font-size: 24px;
+                    line-height: 30px;  
+                }
+            }
+
+            .about__body {
+                padding: 40px 10px;
+
+                .about__social {
+
+
+                    .about__social_item {
+
+                        &:hover {
+
+                            svg {
+                                path {
+                                    fill: var(--btn);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

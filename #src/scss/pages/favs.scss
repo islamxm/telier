@@ -1,0 +1,23 @@
+#favs {
+
+    .favs {
+
+        padding: 30px 0;
+
+        .section_title {
+            margin-bottom: 30px;
+            padding-left: 16px;
+        }
+    }
+}
+
+@media (max-width: 1215px) {
+
+    #favs {
+
+        .favs {
+
+            padding: 10px 0;
+        }
+    }
+}

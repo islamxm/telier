@@ -1,0 +1,44 @@
+#notfound {
+
+    .notfound {
+        padding: 30px 12px 50px 12px;
+        .section_title {
+            margin-bottom: 20px;
+            
+        }
+
+        &__link {
+            color: var(--btn);
+            display: inline-block;
+            font-size: 18px;
+            line-height: 20px;
+            font-weight: 500;
+            
+
+            &:hover {
+                color: var(--orange);
+            }
+        }
+    }
+}
+
+@media (max-width: 1215px) {
+
+    #notfound {
+
+        .notfound {
+            padding-top: 10px;
+            padding-left: 15px;
+            padding-right: 15px;
+
+            &__link {
+                font-size: 16px;
+                line-height: 18px;
+
+                &:hover {
+                    color: var(--btn);
+                }
+            }
+        }
+    }
+}
