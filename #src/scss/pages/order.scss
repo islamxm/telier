@@ -225,6 +225,9 @@
 								label {
 									cursor: pointer;
 								}
+								input:checked ~ label {
+									color: var(--orange);
+								}
 
 								&:hover {
 
@@ -465,8 +468,11 @@
 						}
 					}
 					.action__drop.active {
+						padding-bottom: 15px;
 						.action__drop_input {
-							margin-top: 15px;
+							// margin-top: 15px;
+
+
 						}
 
 						.action__drop_head {
@@ -479,12 +485,12 @@
 					.action__drop {
 						border-radius: 5px;
 						background-color: #EFF3F6;
-						padding: 17px 19px;
+						// padding: 17px 19px;
 
 						&_head {
 							cursor: pointer;							
 							color: #3D5165;
-							
+							padding: 14px 17px;
 							
 							display: flex;
 							align-items: center;
@@ -499,6 +505,9 @@
 							height: 0;
 							overflow: hidden;
 							@include ease-02;
+							padding-left: 17px;
+							padding-right: 17px;
+
 
 
 							input {
@@ -536,6 +545,24 @@
 					&_main {
 						width: 100%;
 						max-width: unset;
+
+						.ordered {
+
+							&__head {
+
+								&_item {
+									&:hover {
+										color: var(--btn_dis);
+									}
+
+									input:checked ~ label {
+										color: var(--orange);
+									}
+								}
+
+
+							}
+						}
 					}
 
 					&_action {
@@ -667,6 +694,7 @@
 										position: absolute;
 										top: 0;
 										left: 0;
+										z-index: 5;
 									}
 									.body {
 										flex-direction: column;

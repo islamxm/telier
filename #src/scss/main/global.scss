@@ -44,6 +44,25 @@ body {
     color: var(--text);
     font-family: 'Gilroy';
     overflow-x: hidden !important;
+
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+html {
+    height: 100%;
+}
+
+.head {
+    flex: 0 0 auto;
+}
+.main {
+    flex: 1 0 auto;
+}
+.foot {
+    flex: 0 0 auto;
 }
 @media (max-width: 1215px) {
     body {

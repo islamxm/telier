@@ -398,6 +398,7 @@ document.addEventListener('DOMContentLoaded', () => {
     dropDown('.filter_hidden', '.filter_hidden_list', '2', 'Все фильтры', 'Скрыть');
     dropDown('.reviews__body_filter_item', '.reviews__body_filter_item_list ');
     dropDown('.action__drop', '.action__drop_input');
+    dropDown('.lk__body_drop', '.lk__body_drop_content');
 
 });
 
