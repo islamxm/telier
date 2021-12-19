@@ -2501,6 +2501,12 @@ html {
   line-height: 32px;
   margin-bottom: 40px;
 }
+.popup__auth_form_item.mail label .inp:after {
+  content: url("../img/auth-mail.svg");
+}
+.popup__auth_form_item.pass label .inp:after {
+  content: url("../img/auth-pass.svg");
+}
 .popup__auth_form_item {
   margin-bottom: 20px;
 }
@@ -2512,6 +2518,15 @@ html {
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
+}
+.popup__auth_form_item label .inp {
+  position: relative;
+}
+.popup__auth_form_item label .inp:after {
+  position: absolute;
+  content: "";
+  top: calc(50% - 9px);
+  left: 14px;
 }
 .popup__auth_form_item label input {
   margin-top: 8px;

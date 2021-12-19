@@ -39,7 +39,28 @@
         }
 
         &_form {
+            &_item.mail {
 
+                label {
+                    .inp {
+
+                        &:after {
+                            content: url('../img/auth-mail.svg');
+                        }
+                    }
+                }
+            }
+            &_item.pass {
+
+                label {
+                    .inp {
+
+                        &:after {
+                            content: url('../img/auth-pass.svg');
+                        }
+                    }
+                }
+            }
             &_item {
                 margin-bottom: 20px;
 
@@ -52,6 +73,16 @@
                     line-height: 18px;
                     font-weight: 500;
 
+                    .inp {
+                        position: relative;
+
+                        &:after {
+                            position: absolute;
+                            content: '';
+                            top: calc(50% - 9px);
+                            left: 14px;
+                        }
+                    }
                     input {
                         margin-top: 8px;
                         display: block;
