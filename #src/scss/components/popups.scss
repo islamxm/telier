@@ -1,0 +1,105 @@
+.popup {
+    opacity: 0;
+    z-index: -1;
+    visibility: hidden;
+    @include ease-02;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .4);
+
+    &__layer {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }   
+
+    &__auth {
+        background-color: #fff;
+        border: 2px solid #ECECEC;
+        border-radius: 16px;
+        max-width: 404px;
+        width: 100%;
+        padding: 48px 40px;
+
+        &_hi {
+            margin-bottom: 5px;
+            color: var(--btn_dis);
+        }
+
+        &_title {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 32px;
+            margin-bottom: 40px;
+        }
+
+        &_form {
+
+            &_item {
+                margin-bottom: 20px;
+
+                &:last-child {
+                    margin: 0;
+                }
+                label {
+                    display: block;
+                    font-size: 16px;
+                    line-height: 18px;
+                    font-weight: 500;
+
+                    input {
+                        margin-top: 8px;
+                        display: block;
+                        border: 1px solid #D8D8D8;
+                        border-radius: 24px;
+                        width: 100%;
+                        padding: 12px 12px 12px 36px;
+                    }
+                }
+            }
+
+            &_btn {
+                margin-bottom: 40px;
+                .btn {
+                    width: 100%;
+                    border-radius: 24px;
+                    background-color: #3183FF;
+                    &:hover {
+                        background-color: var(--btn);
+                    }
+                }
+            }
+
+        }
+
+        &_ex {
+            font-size: 16px;
+            line-height: 18px;
+            color: var(--btn_dis);
+            button {
+                color: #000;
+                @include ease-02;
+                font-weight: 600;
+                &:hover {
+                    color: var(--orange);
+                }
+            }
+        }
+        
+    }
+
+    &__rev {
+        
+    }
+}
+
+.popup.is-open {
+    opacity: 1;
+    z-index: 10000;
+    visibility: visible;
+}

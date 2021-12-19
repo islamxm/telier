@@ -105,7 +105,7 @@
                 <span>Избранное</span>
                 <span class="ind">2</span>
             </a>
-            <a href="#" class="main_btn login">
+            <a href="#" class="main_btn login" data-micromodal-trigger='login'>
                 <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5.2515 1.167C3.96247 1.167 2.9175 2.21197 2.9175 3.501C2.9175 4.79003 3.96247 5.835 5.2515 5.835C6.54053 5.835 7.5855 4.79003 7.5855 3.501C7.5855 2.21197 6.54053 1.167 5.2515 1.167ZM1.7505 3.501C1.7505 1.56745 3.31795 0 5.2515 0C7.18505 0 8.7525 1.56745 8.7525 3.501C8.7525 5.43455 7.18505 7.002 5.2515 7.002C3.31795 7.002 1.7505 5.43455 1.7505 3.501ZM2.9175 9.336C1.95073 9.336 1.167 10.1197 1.167 11.0865C1.167 11.4088 0.905758 11.67 0.5835 11.67C0.261242 11.67 0 11.4088 0 11.0865C0 9.47521 1.30621 8.169 2.9175 8.169H7.5855C9.19679 8.169 10.503 9.47521 10.503 11.0865C10.503 11.4088 10.2418 11.67 9.9195 11.67C9.59724 11.67 9.336 11.4088 9.336 11.0865C9.336 10.1197 8.55227 9.336 7.5855 9.336H2.9175Z" fill="#242424"/>
                 </svg>
@@ -675,7 +675,7 @@
                                                 <li class="custom__descr_item"><span class="name">Гарантия</span> <span class="value">1 год</span></li>
                                                 
                                             </ul>
-                                            <a href="#" class="custom__link">Перейти к описанию</a>
+                                            <a href="#descr" class="custom__link">Перейти к описанию</a>
                                             <div class="custom__ex">
                                                 <svg width="31" height="38" viewBox="0 0 31 38" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M21.0458 6.07608C22.2218 4.65506 23.0548 2.71954 23.0548 0.75951C23.0548 0.490006 23.0303 0.220503 22.9813 0C21.0703 0.073501 18.7672 1.27402 17.3952 2.89104C16.3172 4.11605 15.3127 6.07608 15.3127 8.03611C15.3127 8.33011 15.3617 8.62411 15.3862 8.72211C15.5087 8.74661 15.7047 8.77112 15.9007 8.77112C17.6157 8.77112 19.7718 7.6196 21.0458 6.07608ZM22.3933 9.18762C19.5268 9.18762 17.1992 10.9271 15.7047 10.9271C14.1122 10.9271 12.0297 9.28562 9.53063 9.28562C4.80206 9.28562 0 13.2057 0 20.5803C0 25.1863 1.76402 30.0374 3.96905 33.1734C5.85558 35.8195 7.4971 38 9.87363 38C12.2257 38 13.2547 36.432 16.1702 36.432C19.1348 36.432 19.7963 37.951 22.3933 37.951C24.9658 37.951 26.6809 35.599 28.2979 33.2714C30.1109 30.6009 30.8704 28.0039 30.8949 27.8814C30.7479 27.8324 25.8233 25.8233 25.8233 20.1883C25.8233 15.3127 29.6944 13.1322 29.9149 12.9607C27.3669 9.28562 23.4713 9.18762 22.3933 9.18762Z" fill="#242424"/>
@@ -868,6 +868,16 @@
                         </div>
                     </div>
                 </section>
+
+                <div class="descr" id="descr">
+                    <h3 class="descr__title section_title">
+                        Описание товара
+                    </h3>
+                    <div class="descr__text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur quibusdam molestiae assumenda necessitatibus numquam rerum eius laborum. Esse provident, magnam nihil tenetur veritatis quis quae. Quas praesentium nemo placeat soluta. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam molestiae minus illum voluptate reiciendis quae voluptatum, illo aspernatur perspiciatis sint optio. Atque sequi earum quia iusto! Quis qui impedit corrupti.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, repellat quibusdam! Dicta dignissimos magni sunt culpa vel, omnis quae laboriosam. Recusandae corporis earum magnam itaque porro eius ut veritatis beatae?
+                    </div>
+                </div>
                 
                 <section class="pop">
                     <div class="section__top">
@@ -1429,6 +1439,89 @@
     </div>
 </footer>
         </div>
+
+        <div class="popup" id="login" aria-hidden="true">
+
+    <div class="popup__layer" tabindex="-1" data-micromodal-close>
+  
+      <!-- [3] -->
+      <div role="dialog" aria-modal="true" >
+        
+        <div class="popup__auth">
+          <div class="popup__auth_hi">Здравствуйте!</div>
+          <div class="popup__auth_title">
+            Войдите в личный кабинет
+          </div>
+
+          <form class="popup__auth_form">
+              <div class="popup__auth_form_item mail">
+                  <label>
+                    E-Mail 
+                    <input type="email" placeholder="e.g.: elonmusk@mars.com ">
+                  </label>
+              </div>
+
+              <div class="popup__auth_form_item mail">
+                <label>
+                    Ваш пароль
+                  <input type="password" placeholder="e.g.: X Æ A-12 ">
+                </label>
+            </div>
+
+              <div class="popup__auth_form_btn">
+                  <button class="btn">Войти</button>
+              </div>
+          </form>
+
+          <div class="popup__auth_ex">
+            Нет аккаунта? <button data-micromodal-trigger='signin' data-micromodal-close="login">Зарегистрироваться →</button>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+            <div class="popup" id="signin" aria-hidden="true">
+
+    <div class="popup__layer" tabindex="-1" data-micromodal-close>
+  
+      <!-- [3] -->
+      <div role="dialog" aria-modal="true" >
+        
+        <div class="popup__auth">
+          <div class="popup__auth_hi">Здравствуйте!</div>
+          <div class="popup__auth_title">
+            Зарегистрируйтесь,что бы войти в личный кабинет
+          </div>
+
+          <form class="popup__auth_form">
+              <div class="popup__auth_form_item mail">
+                  <label>
+                    E-Mail 
+                    <input type="email" placeholder="e.g.: elonmusk@mars.com ">
+                  </label>
+              </div>
+
+              <div class="popup__auth_form_item mail">
+                <label>
+                    Ваш пароль
+                  <input type="password" placeholder="e.g.: X Æ A-12 ">
+                </label>
+            </div>
+
+              <div class="popup__auth_form_btn">
+                  <button class="btn">Зарегистрироваться</button>
+              </div>
+          </form>
+
+          <div class="popup__auth_ex">
+            Есть аккаунт? <button data-micromodal-trigger="login" data-micromodal-close="signin">Войти →</button>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </div>
         <script src="./js/bundle.js"></script>
     </body>
 </html>

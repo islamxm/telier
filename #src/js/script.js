@@ -2,22 +2,25 @@ import Swiper from './libs/swiper';
 import * as noUiSlider from 'nouislider';
 import wNumb from 'wnumb';
 import { Fancybox, Carousel, Panzoom } from "@fancyapps/ui";
+import MicroModal from 'micromodal';
 
 document.addEventListener('DOMContentLoaded', () => {
+
+    MicroModal.init();
 
     const tabs = document.querySelectorAll('.header__menu_aside_item');
     const tabsCotent = document.querySelectorAll('.header__menu_body');
     const tabsParent = document.querySelector('.header__menu_aside_list');
     const tabContentCloseBtn = document.querySelectorAll('[data-menuclose]');
 
-    function hideTabContent() {
-        tabsCotent.forEach(i => {
+    function hideTabContent(tc = tabsCotent) {
+        tc.forEach(i => {
             i.style.display = 'none';
         });
     }
 
-    function showTabContent(i = 0) {
-        tabsCotent[i].style.display = 'flex';
+    function showTabContent(i = 0, tc = tabsCotent, style = 'flex') {
+        tc[i].style.display = style;
     }
 
     const prevSwiper = new Swiper('.prev__in', {
@@ -385,9 +388,48 @@ document.addEventListener('DOMContentLoaded', () => {
     //         }
     //     })
     // })
+    const articlesPage = document.querySelector('#arts');
 
+    if(articlesPage) {
+        const articlesTabs = articlesPage.querySelectorAll('.item');
+        const articlesTabsParent = articlesPage.querySelector('.arts__side_tabs');
+        const articlesContent = articlesPage.querySelectorAll('.arts__content');
+
+        hideTabContent(articlesContent);
+        showTabContent(0, articlesContent, 'block');
+
+        articlesTabsParent.addEventListener('click', (e) => {
+                let tar = e.target;
+
+                if(tar && tar.classList.contains('item')) {
+                    articlesTabs.forEach((i, index) => {
+                        if(tar == i) {
+                            hideTabContent(articlesContent);
+                            showTabContent(index, articlesContent, 'block');
+                        }
+                    })
+                }
+            })
+
+
+        // if(tabsParent) {
+        //     tabsParent.addEventListener('click', (e) => {
+        //         let tar = e.target;
+        //         if(tar && tar.classList.contains('header__menu_aside_item')) {
+        //             tabs.forEach((i, index) => {
+        //                 if(tar == i) {
+        //                     hideTabContent();
+        //                     showTabContent(index);
+        //                 }
+        //             })
+        //         }
+        //     });
+        // }
+
+    }
     
 
+    
     
     counter();
 
@@ -399,6 +441,7 @@ document.addEventListener('DOMContentLoaded', () => {
     dropDown('.reviews__body_filter_item', '.reviews__body_filter_item_list ');
     dropDown('.action__drop', '.action__drop_input');
     dropDown('.lk__body_drop', '.lk__body_drop_content');
+    dropDown('.tab__list', '.tab__list_body');
 
 });
 
