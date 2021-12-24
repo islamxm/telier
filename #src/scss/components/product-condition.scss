@@ -33,3 +33,66 @@
         padding: 5px 20px;
     }
 }
+
+.product.process {
+    .btn {
+        background-color: var(--orange);
+
+        &:active {
+            transform: none;
+        }
+
+        &:hover {
+            background-color: var(--orange);
+        }
+    }
+}
+
+.product.accept {
+    .btn {
+        background-color: var(--btn);
+
+        &:active {
+            transform: none;
+        }
+
+        &:hover {
+            background-color: var(--btn);
+        }
+    }
+}
+
+.product.cancel {
+    .btn {
+        background-color: var(--red);
+
+        &:active {
+            transform: none;
+        }
+
+        &:hover {
+            background-color: var(--red);
+        }
+    }
+}
+
+.product.disabled {
+    .btn {
+        background-color: var(--btn_dis);
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+
+        &:active {
+            transform: none;
+        }
+    }
+}
+
+.product.func {
+    .product_func {
+        position: absolute;
+        top: 10px;
+        right: 0;
+        display:block;
+    }
+}

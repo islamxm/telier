@@ -9,7 +9,7 @@
 			justify-content: space-between;
 
 			&__profile {
-				max-width: 200px;
+				max-width: 250px;
 				width: 100%;
 				display: flex;
 				flex-direction: column;
@@ -31,22 +31,45 @@
 
 				&_action {
 					display: flex;
-					justify-content: space-between;
+					justify-content: flex-end;
 					width: 100%;
-					button {
-						color: var(--btn);
-						@include ease-02;
-						font-weight: 600;
-
-						&:hover {
-							color: var(--orange);
-						}
-					}
+					margin-bottom: 35px;
+					padding-right: 40px;
 
 					a {
 						display: block;
 						font-weight: 600;
 						color: red;
+					}
+				}
+
+				&_filter {
+					padding: 24px 15px;
+					border: 2px solid var(--btn_dis);
+					border-radius: 16px;
+					width: 100%;
+
+					&_item {
+						width: 184px;
+						width: 100%;
+						padding: 10px 14px;
+						border-radius: 24px;
+						border: 2px solid var(--btn_dis);
+						color: var(--btn_dis);
+						margin-bottom: 18px;
+						font-size: 16px;
+						line-height: 20px;
+						cursor: pointer;
+
+						&:last-child {
+							margin: 0;
+						}
+					}
+
+					&_item.lk__profile_filter_item_active {
+						background-color: var(--btn);
+						color: #fff;
+						border-color: var(--btn);
 					}
 				}
 			}
@@ -79,12 +102,25 @@
 						display: flex;
 						justify-content: space-between;
 						align-items: center;
+						flex-wrap: wrap;
 						cursor: pointer;
 						color: #3D5165;
 						font-weight: 500;
 						font-size: 20px;
 						line-height: 22px;
 						padding: 25px 0;
+						.edit_wr {
+							width: 100%;
+
+							button {
+								color: var(--btn);
+								font-size: 14px;
+								line-height: 17px;
+								text-align: left;
+								font-weight: 600;
+							}
+						}
+						
 
 						svg {
 							@include ease-02;
@@ -170,6 +206,17 @@
 							line-height: 16px;	
 							svg {
 								margin-right: 10px;
+							}
+
+							
+						}
+						.edit_wr {
+							width: 100%;
+							button {
+								font-size: 14px;
+								line-height: 17px;
+								color: var(--btn);
+								font-weight: 600;
 							}
 						}
 
