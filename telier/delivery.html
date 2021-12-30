@@ -633,12 +633,17 @@
                                                         </div>
                                                     </div>
                                                     <div class="product_ex">-19%</div>
-                                                    <button class="product_func">
-                                                        <img src="./img/func.svg" alt="">
-                                                    </button>
+                                                    <div class="product_func">
+                                                        <img class="func_open" src="./img/func.svg" alt="">
+
+                                                        <div class="product_func_menu">
+                                                            <button data-micromodal-trigger="moreOrder" class="fs">Смотреть детали заказа</button>
+                                                            <button data-micromodal-trigger="moreCancel" class="fs">Отменить заказ</button>
+                                                        </div>
+                                                    </div>
                                                 </div>
 
-                                                <div class="product accept">
+                                                <div class="product func accept">
                                                     <a href="#" class="product_img">
                                                         <picture>
                                                             <source type="image/webp">
@@ -685,9 +690,17 @@
                                                         </div>
                                                     </div>
                                                     <div class="product_ex">-19%</div>
+                                                    <div class="product_func">
+                                                        <img class="func_open" src="./img/func.svg" alt="">
+
+                                                        <div class="product_func_menu">
+                                                            <button data-micromodal-trigger="moreOrder" class="fs">Смотреть детали заказа</button>
+                                                            <button class="fs">Отменить заказ</button>
+                                                        </div>
+                                                    </div>
                                                 </div>
 
-                                                <div class="product cancel">
+                                                <div class="product func cancel">
                                                     <a href="#" class="product_img">
                                                         <picture>
                                                             <source type="image/webp">
@@ -734,6 +747,14 @@
                                                         </div>
                                                     </div>
                                                     <div class="product_ex">-19%</div>
+                                                    <div class="product_func">
+                                                        <img class="func_open" src="./img/func.svg" alt="">
+
+                                                        <div class="product_func_menu">
+                                                            <button data-micromodal-trigger="moreOrder" class="fs">Смотреть детали заказа</button>
+                                                            <button class="fs">Отменить заказ</button>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                             
@@ -980,6 +1001,65 @@
           <div class="popup__auth_ex">
             Есть аккаунт? <button data-micromodal-trigger="login" data-micromodal-close="signin">Войти →</button>
           </div>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+            <div class="popup" id="moreOrder" aria-hidden="true">
+
+    <div class="popup__layer" tabindex="-1" data-micromodal-close>
+  
+      <!-- [3] -->
+      <div role="dialog" aria-modal="true" >
+        
+        <div class="popup__moreOrder">
+
+          <div class="popup__moreOrder_title">
+            Детали заказа
+          </div>
+
+          
+
+          <div class="popup__moreOrder_body">
+            <div class="popup__moreOrder_body_info adress">
+              Отеделение Почты России №41532643
+              обл. Омская, г. Омск, ул. 70 лет Октября, д. 19
+
+            </div>  
+            <div class="popup__moreOrder_body_info date">
+              Приблизительная дата доставки: 25 мая 
+            </div>  
+            <div class="popup__moreOrder_body_info dsct">
+              Сумма с учетом скидок: 2500 рублей
+            </div>  
+          </div>
+
+        </div>
+  
+      </div>
+    </div>
+  </div>
+            <div class="popup" id="moreCancel" aria-hidden="true">
+
+    <div class="popup__layer" tabindex="-1" data-micromodal-close>
+  
+      <!-- [3] -->
+      <div role="dialog" aria-modal="true" >
+        
+        <div class="popup__moreOrder">
+
+          <div class="popup__moreOrder_title">
+            Вы действительно хотите отменить заказ?
+          </div>
+
+          
+
+          <div class="popup__moreOrder_body">
+            <button class="popup__moreOrder_body_btn" data-micromodal-close>Отменить заказ</button> 
+            <button class="popup__moreOrder_body_ex" data-micromodal-close>Нет, я передумал</button>
+          </div>
+
         </div>
   
       </div>

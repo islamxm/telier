@@ -139,12 +139,17 @@
                                                         </div>
                                                     </div>
                                                     <div class="product_ex">-19%</div>
-                                                    <button class="product_func">
-                                                        <img src="./img/func.svg" alt="">
-                                                    </button>
+                                                    <div class="product_func">
+                                                        <img class="func_open" src="./img/func.svg" alt="">
+
+                                                        <div class="product_func_menu">
+                                                            <button data-micromodal-trigger="moreOrder" class="fs">Смотреть детали заказа</button>
+                                                            <button data-micromodal-trigger="moreCancel" class="fs">Отменить заказ</button>
+                                                        </div>
+                                                    </div>
                                                 </div>
 
-                                                <div class="product accept">
+                                                <div class="product func accept">
                                                     <a href="#" class="product_img">
                                                         <picture>
                                                             <source type="image/webp">
@@ -191,9 +196,17 @@
                                                         </div>
                                                     </div>
                                                     <div class="product_ex">-19%</div>
+                                                    <div class="product_func">
+                                                        <img class="func_open" src="./img/func.svg" alt="">
+
+                                                        <div class="product_func_menu">
+                                                            <button data-micromodal-trigger="moreOrder" class="fs">Смотреть детали заказа</button>
+                                                            <button class="fs">Отменить заказ</button>
+                                                        </div>
+                                                    </div>
                                                 </div>
 
-                                                <div class="product cancel">
+                                                <div class="product func cancel">
                                                     <a href="#" class="product_img">
                                                         <picture>
                                                             <source type="image/webp">
@@ -240,6 +253,14 @@
                                                         </div>
                                                     </div>
                                                     <div class="product_ex">-19%</div>
+                                                    <div class="product_func">
+                                                        <img class="func_open" src="./img/func.svg" alt="">
+
+                                                        <div class="product_func_menu">
+                                                            <button data-micromodal-trigger="moreOrder" class="fs">Смотреть детали заказа</button>
+                                                            <button class="fs">Отменить заказ</button>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                             
@@ -258,6 +279,8 @@
 
             @@include('./popups/login.html')
             @@include('./popups/signin.html')
+            @@include('./popups/more-order.html')
+            @@include('./popups/more-cancel.html')
             <script src="./js/bundle.js"></script>
         </body>
     </html>

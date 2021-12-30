@@ -127,6 +127,237 @@
     &__rev {
         
     }
+
+    &__moreOrder {
+        max-width: 500px;
+        width: 100%;
+        background-color: #fff;
+        padding: 27px 40px;
+        border-radius: 16px;
+        border: 2px solid #ECECEC;
+
+        &_title {
+            font-size: 24px;
+            line-height: 29px;
+            margin-bottom: 21px;
+            font-weight: 700;
+            color: #3D5165;
+        }
+
+        &_body {
+
+            &_info {
+                margin-bottom: 20px;
+                padding-left: 21px;
+                position: relative;
+                font-weight: 500;
+
+                &:after {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+
+                &:last-child {
+                    margin: 0;
+                }
+            }
+
+            &_info.adress {
+                &:after {
+                    content: url('../img/inbox.svg');
+                }
+            }
+
+            &_info.date {
+                &:after {
+                    content: url('../img/clock.svg');
+                }
+            }
+
+            &_info.dsct {
+                &:after {
+                    content: url('../img/data.svg');
+                }
+            }
+
+            &_btn {
+                width: 100%;
+                padding: 14px;
+                background-color: var(--btn_hover);
+                text-align: center;
+                color: #fff;
+                font-weight: 500;
+                border-radius: 24px;
+                margin-bottom: 16px;
+                @include ease-02;
+
+                &:hover {
+                    background-color: var(--orange);
+                }
+            }
+
+            &_ex {
+                color: var(--btn_hover);
+                @include ease-02;
+
+                &:hover {
+                    color: var(--orange);
+                }
+            }
+        }
+    }
+
+    &__deliv {
+        background-color: #fff;
+        border-radius: 16px;
+        border: 2px solid #ECECEC;
+        max-width: 480px;
+        width: 100%;
+        padding: 40px;
+
+        &_title {
+            font-size: 24px;
+            line-height: 29px;
+            margin-bottom: 21px;
+            font-weight: 700;
+            color: #3D5165;
+        }
+
+        &_body {
+
+            &_item {
+                font-weight: 500;
+                margin-bottom: 25px;
+                cursor: pointer;
+
+                &:hover {
+                    color: var(--btn);
+                }
+
+            }
+        }
+
+        &_btn {
+            background-color: var(--btn_hover);
+            border-radius: 24px;
+            color: #fff;
+            font-weight: 500;
+            width: 100%;
+            padding: 14px;
+            text-align: center;
+            @include ease-02;
+
+            &:hover {
+                background-color: var(--orange);
+            }
+        }
+    }
+
+    &__personal {
+        width: 400px;
+        padding: 45px 40px;
+        background-color: #fff;
+        border-radius: 16px;
+
+        &_title {
+            font-size: 24px;
+            line-height: 32px;
+            margin-bottom: 40px;
+            font-weight: 700;
+        }
+
+        &_form {
+
+            &_item {
+                margin-bottom: 20px;
+
+                &_name {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-weight: 500;
+                    margin-bottom: 8px;
+
+                    button {
+                        display: inline;
+                        color: var(--btn);
+                        @include ease-02;
+
+                        &:hover {
+                            color: var(--orange);
+                        }
+
+                    }
+                }
+
+                label {
+                    width: 100%;
+                    position: relative;
+
+                    &:after {
+                        position: absolute;
+                        top: 2px;
+                        left: 12px;
+
+                    }
+
+                    input {
+                        width: 100%;
+                        border: 1px solid #D8D8D8;
+                        border-radius: 24px;
+                        padding: 12px 12px 12px 36px;
+                    }
+                }
+            }
+
+            &_item.mail {
+
+                label {
+                    &:after {
+                        content: url('../img/auth-mail.svg');
+                    }
+                }
+            }
+
+            &_item.name {
+                label {
+                    &:after {
+                        content: url('../img/user.svg');
+                    }
+                }
+            }
+
+            &_item.secname {
+                label {
+                    &:after {
+                        content: url('../img/user.svg');
+                    }
+                }
+            }
+
+            &_item.phone {
+                label {
+                    &:after {
+                        content: url('../img/tel.svg');
+                    }
+                }
+            }
+
+            &_btn {
+                background-color: var(--btn_hover);
+                color: #fff;
+                font-weight: 500;
+                padding: 14px 45px;
+                border-radius: 24px;
+                @include ease-02;
+
+                &:hover {
+                    background-color: var(--orange);
+                }
+            }
+        }
+    }
 }
 
 .popup.is-open {
