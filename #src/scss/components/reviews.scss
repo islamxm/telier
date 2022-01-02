@@ -4,6 +4,13 @@
         margin-bottom: 17px;
     }
 
+    &__add {
+        margin-bottom: 20px;
+        .btn {
+            padding: 14px 50px;
+        }
+    }
+
     &__content {
 
         &_title {

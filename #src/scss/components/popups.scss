@@ -358,10 +358,201 @@
             }
         }
     }
+
+    &__adress {
+        width: 450px;
+        background-color: #fff;
+        border-radius: 16px;
+        padding: 45px 40px;
+
+        &_head {
+            font-weight: 700;
+            color: #3D5165;
+            font-size: 25px;
+            line-height: 30px;
+            margin-bottom: 25px;
+        }
+
+        &_scdr {
+            font-size: 20px;
+            line-height: 24px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        &_form {
+
+            &_main {
+                margin-bottom: 25px;
+                &_head {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-bottom: 5px;
+
+                    .name {
+                        font-weight: 500;
+
+                    }
+                }
+
+                &_input {
+                    width: 100%;
+
+                    input {
+                        width: 100%;
+                        padding: 12px;
+                        border: 1px solid #D8D8D8;
+                        border-radius: 24px;
+                    }
+                }
+            }
+
+            &_ex {
+                margin-bottom: 35px;
+                &_head {
+                    font-weight: 500;
+                    margin-bottom: 5px;
+                }
+
+                &_wr {
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    
+                    display: flex;
+                    .item {
+                        width: 48%;
+                        margin-bottom: 8px;
+
+                        input {
+                            padding: 12px;
+                        border: 1px solid #D8D8D8;
+                        border-radius: 24px;
+                        width: 100%;
+                        }
+
+                    }
+                }
+            }
+
+            &_btn {
+
+                button {
+                    background-color: var(--btn_hover);
+                    border-radius: 24px;
+                    color: #fff;
+                    font-weight: 500;
+                    padding: 14px 50px;
+                    @include ease-02;
+
+                    &:hover {
+                        background-color: var(--orange);
+                    }
+
+                }
+            }
+        }
+    }
+
+    &__review {
+        background-color: #fff;
+        border-radius: 16px;
+        padding: 45px 40px;
+        width: 450px;
+        &_title {
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 30px;
+            margin-bottom: 30px;
+        }
+
+        &_form {
+
+            .item {
+                margin-bottom: 25px;
+                label {
+                    display: block;
+                    font-weight: 600;
+
+                    input {
+                        margin-top: 5px;
+                        // display: block;
+                        width: 100%;
+                        border: 1px solid #D8D8D8;
+                        border-radius: 24px;
+                        padding: 12px;
+                    }
+                }
+
+                &__title {
+                    font-weight: 600;
+                    margin-bottom: 5px;
+                }
+
+                &__field {
+                    border: 1px solid #D8D8D8;
+                    border-radius: 24px;
+                    padding: 12px;
+                    height: 200px;
+                    textarea {
+                        resize: none;
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    &_up {
+                        input {
+                            display: none;
+                        }
+
+                        label {
+                            display: block;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                    }
+                }
+
+                button {
+                    padding: 14px 29px;
+                    border-radius: 24px;
+                    background-color: var(--btn_hover);
+                    color: #fff;
+                    font-weight: 500;
+                    @include ease-02;
+
+                    &:hover {
+                        background-color: var(--orange);
+                    }
+                }
+            }
+
+            .item.stars {
+
+                label {
+
+                    input {
+                        width: unset;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .popup.is-open {
     opacity: 1;
     z-index: 10000;
     visibility: visible;
+}
+
+
+
+@media (max-width: 500px) {
+    .popup {
+        &__layer {
+            padding: 0 10px;
+        }
+    }
 }

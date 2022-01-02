@@ -13,14 +13,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const tabsParent = document.querySelector('.header__menu_aside_list');
     const tabContentCloseBtn = document.querySelectorAll('[data-menuclose]');
 
-    function hideTabContent(tc = tabsCotent) {
-        tc.forEach(i => {
+    function hideTabContent(tCnt = tabsCotent) {
+        tCnt.forEach(i => {
             i.style.display = 'none';
         });
     }
 
-    function showTabContent(i = 0, tc = tabsCotent, style = 'flex') {
-        tc[i].style.display = style;
+    function showTabContent(i = 0, tCnt = tabsCotent, style = 'flex') {
+        tCnt[i].style.display = style;
     }
 
     const prevSwiper = new Swiper('.prev__in', {
@@ -184,7 +184,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if(tabContentCloseBtn) {
         tabContentCloseBtn.forEach(i => {
-            i.addEventListener('click', hideTabContent);
+            i.addEventListener('click', ()=> {
+                hideTabContent();
+            });
         }); 
     }
     
@@ -431,24 +433,49 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const funcBtns = document.querySelectorAll('.product_func');
 
+
+    function funcMenuClose() {
+        let menus = document.querySelectorAll('.product_func_menu');
+
+        menus.forEach(i => {
+            i.classList.remove('active');
+        })
+    }
+
+
+
     funcBtns.forEach(i => {
         i.addEventListener('click', (e)=> {
             let menu = e.currentTarget.querySelector('.product_func_menu');
-            let menus = document.querySelectorAll('.product_func_menu');
+            
 
-            menus.forEach(i => {
-                i.classList.remove('active');
-            })
+            // funcMenuClose();
 
 
-
-            if(e.target || e.target.classList.contains('func_open') || e.target.classList.contains('product_func')) {
-                menu.classList.add('active');
+            if(e.target) {
+                menu.classList.toggle('active');
             }
 
-            if(e.target.classList.contains('fs')) {
+
+            if(e.target.className == 'product_func_menu' || e.target.className == 'fs') {
                 menu.classList.remove('active');
             }
+
+            // if(e.target || e.target.classList.contains('func_open') || e.target.classList.contains('product_func')) {
+            //     menu.classList.add('active');
+            // }
+
+            // if(e.target.className == 'func_open' || e.target.className == 'product_func') {
+            //     menu.classList.toggle('active');
+            // }
+
+            // if(e.target.classList.contains('fs')) {
+            //     menu.classList.remove('active');
+            // }
+
+            // if(e.target.className != 'product_func_menu') {
+            //     menu.classList.remove('active');
+            // }
 
             // if(!e.target.classList.contains('product_func') || !e.target.classList.contains('func_open')) {
             //     menu.classList.remove('active')
@@ -457,6 +484,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
            
         })
+    })
+
+    document.body.addEventListener('click', (e)=> {
+        if(e.target.className != 'func_open') {
+            funcMenuClose();
+        }
     })
 
 
