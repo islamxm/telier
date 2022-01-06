@@ -279,7 +279,7 @@
 
                     <div class="reviews__body">
                         <div class="reviews__body_filter">
-                            <div class="reviews__body_filter_item dropdown">
+                            <!-- <div class="reviews__body_filter_item dropdown">
                                 <div class="reviews__body_filter_item_head dropdown_head" data-drophead>
                                     Сначала полезные
                                     <svg data-drophead width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -291,6 +291,13 @@
                                     <div class="reviews__body_filter_item_list_item dropdown_item">Сначала полезные</div>
                                     <div class="reviews__body_filter_item_list_item dropdown_item">Сначала полезные</div>
                                 </div>
+                            </div> -->
+                            <div class="reviews__body_filter_drop">
+                                <select class="reviews__body_filter_drop_select">
+                                    <option value="Сначала полезные">Сначала полезные</option>
+                                    <option value="Сначала старые">Сначала старые</option>
+                                    <option value="Сначала новые">Сначала новые</option>
+                                </select>
                             </div>
                             <div class="reviews__body_filter_item">
                                 <input id="withPhoto" type="checkbox">
@@ -790,13 +797,14 @@
                 </section>
             </div>
         </main>
-        <div class="container">
+        <div class="container foot">
             @@include('./blocks/footer.html')
         </div>
 
         @@include('./popups/login.html')
-            @@include('./popups/signin.html')
-            @@include('./popups/rev.html')
+        @@include('./popups/signin.html')
+        @@include('./popups/rev.html')
+        @@include('./popups/city.html')
         <script src="./js/bundle.js"></script>
     </body>
 </html>

@@ -47,6 +47,40 @@
             display: flex;
             margin-bottom: 30px;
 
+            &_drop {
+                .choices {
+
+
+                    &__inner {
+                        background-color: #EFF3F6 !important;
+                        border: none;
+                        color: #3D5165;
+                    }
+                    .choices__list {
+                        top: 120%;
+                        width: 140%;
+                        border-radius: 15px;
+                        border-top-left-radius: 0px;
+                        background-color: #EFF3F6;
+                        border: none;
+                        
+                        .choices__list {
+                            padding: 0 !important;
+
+                            .choices__item {
+                                padding: 7.5px;
+                                border-bottom: 1px solid rgba(36, 36, 36, 0.05);
+
+                                &:hover {
+                                    background-color: #EFF3F6;
+                                }
+
+                            }
+                        }
+                    }
+                    
+                }
+            }
             &_item {
                 cursor: pointer;
                 &:last-child {

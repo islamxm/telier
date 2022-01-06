@@ -124,9 +124,7 @@
         
     }
 
-    &__rev {
-        
-    }
+    
 
     &__moreOrder {
         max-width: 500px;
@@ -493,23 +491,34 @@
                     border: 1px solid #D8D8D8;
                     border-radius: 24px;
                     padding: 12px;
+                    padding-bottom: 30px;
                     height: 200px;
+                    position: relative;
                     textarea {
                         resize: none;
                         width: 100%;
                         height: 100%;
+
                     }
 
                     &_up {
+                        position: absolute;
+                        bottom: 7px;
+                        left: 10px;
+
                         input {
                             display: none;
                         }
 
                         label {
-                            display: block;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
+                            // display: flex;
+                            // justify-content: center;
+                            // align-items: center;
+                            
+
+                            img {
+                                
+                            }
                         }
                     }
                 }
@@ -539,6 +548,123 @@
             }
         }
     }
+
+    &__city {
+        background-color: #fff;
+        border-radius: 16px;
+        padding: 45px 40px;
+        width: 450px;
+        &_title {
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 30px;
+            margin-bottom: 30px;
+            color: #3D5165;
+        }
+
+        &_search {
+            margin-bottom: 20px;
+            .choices {
+                &__inner {
+                        background-color: #EFF3F6 !important;
+                        border: none;
+                        color: #3D5165;
+                    }
+                    .choices__list {
+                        top: 120%;
+                        width: 100%;
+                        border-radius: 15px;
+                        border-top-left-radius: 0px;
+                        background-color: #EFF3F6;
+                        border: none;
+                        
+                        .choices__list {
+                            padding: 0 !important;
+
+                            .choices__item {
+                                padding: 7.5px;
+                                border-bottom: 1px solid rgba(36, 36, 36, 0.05);
+
+                                &:hover {
+                                    background-color: #EFF3F6;
+                                }
+
+                            }
+                        }
+                    }
+            }
+        }
+
+        &_btn {
+            background: #3183FF;
+            border-radius: 24px;
+            color: #fff;
+            font-weight: 500;
+            width: 100%;
+            padding: 14px;
+            @include ease-02;
+
+            &:hover {
+                background-color: var(--orange);
+            }
+        }
+    }
+
+    &__pass-edit {
+        background-color: #fff;
+        border-radius: 16px;
+        padding: 45px 40px;
+        width: 400px;
+        &_title {
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 30px;
+            margin-bottom: 30px;
+            color: #3D5165;
+        }
+
+        &_form {
+
+            &_item {
+                margin-bottom: 20px;
+                label {
+                    font-weight: 500;
+                    input {
+                        width: 100%;
+                        padding: 12px;
+                        border: 1px solid #D8D8D8;
+                        border-radius: 24px;
+                        display: block;
+                        margin-top: 10px;
+                    }
+                }
+            }
+
+            &_ex {
+                color: #3183FF;
+                font-weight: 500;
+                margin-bottom: 20px;
+
+                &:hover {
+                    color: var(--orange);
+                }
+            }
+
+            &_btn {
+                padding: 14px;
+                border-radius: 24px;
+                background-color: #3183FF;
+                color: #fff;
+                font-weight: 500;
+                @include ease-02;
+                width: 100%;
+
+                &:hover {
+                    background-color: var(--orange);
+                }
+            }
+        }
+    }
 }
 
 .popup.is-open {
@@ -552,7 +678,24 @@
 @media (max-width: 500px) {
     .popup {
         &__layer {
-            padding: 0 10px;
+            padding: 10px 10px;
+        }
+
+        &__review {
+            padding: 20px;
+            max-width: 420px;
+            width: 100%;
+
+            &_title {
+                margin-bottom: 20px;
+            }
+
+            &_form {
+
+                .item {
+                    margin-bottom: 12px;
+                }
+            }
         }
     }
 }

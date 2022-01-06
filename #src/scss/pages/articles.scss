@@ -177,6 +177,21 @@
 
             .arts {
                 padding: 10px 11px;
+                flex-wrap: wrap;
+
+                &__side {
+                    width: 100%;
+                    max-width: unset;
+
+                    &_search {
+                        display: none;
+                    }
+                }
+
+                &__main {
+                    width: 100%;
+                }
+
             }
         }
     }

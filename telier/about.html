@@ -17,9 +17,9 @@
             <header class="header">
     <div class="header__top">
         <div class="header__top_contacts">
-            <a href="#" class="geo">
+            <button class="geo" data-micromodal-trigger="city">
                 Москва
-            </a>
+            </button>
             <a href="tel:+79223543232" class="tel">+7 (922) 354 32 32</a>
         </div>
         <ul class="header__top_nav">
@@ -65,7 +65,7 @@
         </button>
         </div>
         <div class="header__main_search">
-            <div class="header__main_search_drop dropdown">
+            <!-- <div class="header__main_search_drop dropdown">
                 <div class="header__main_search_drop_head dropdown_head" data-drophead>
                     Везде
                     <svg data-drophead width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -78,7 +78,16 @@
                     <div class="header__main_search_drop_item dropdown_item" data-droplistitem>Категория 2</div>
                     <div class="header__main_search_drop_item dropdown_item" data-droplistitem>Категория 3</div>
                 </div>
+            </div> -->
+            <div class="header__main_search_filter">
+                <select class="header__main_search_filter_select">
+                    <option value="Все">Везде</option>
+                    <option value="Категории">Категории</option>
+                    <option value="Товары">Товары</option>
+                </select>
             </div>
+            
+
             <input class="header__main_search_input" type="text" placeholder="Поиск по товарам">
             <button class="header__main_search_btn">
                 <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -88,6 +97,7 @@
             </button>
         </div>
         <div class="header__main_btns">
+            
             <a href="#" class="main_btn basket">
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.41631 1.33333L2.5054 8.41248C2.51333 8.47091 2.52991 8.5266 2.55381 8.5782C2.62575 8.73353 2.76401 8.85188 2.93226 8.8969C2.98366 8.91071 3.03752 8.91761 3.09262 8.91667H9.50008C9.75769 8.91667 9.98479 8.7477 10.0588 8.50095L11.8088 2.66762C11.8618 2.491 11.8282 2.29973 11.7181 2.15179C11.608 2.00385 11.4345 1.91667 11.2501 1.91667H2.68644L2.49459 0.669613C2.4874 0.617473 2.47332 0.567533 2.4533 0.52074C2.41697 0.435529 2.36132 0.361718 2.29259 0.303863C2.22881 0.250085 2.15335 0.209732 2.07056 0.187159C2.01844 0.172888 1.96377 0.16574 1.90782 0.166668H0.750081C0.427915 0.166668 0.166748 0.427835 0.166748 0.750001C0.166748 1.07217 0.427915 1.33333 0.750081 1.33333H1.41631ZM3.58388 7.75L2.86593 3.08333H10.4661L9.06606 7.75H3.58388Z" fill="#242424"/>
@@ -583,7 +593,7 @@
                 </div>
             </div>
         </main>
-        <div class="container">
+        <!-- <div class="container"> -->
             <section class="reg">
                 <div class="mainform">
     <h2 class="section_title">Узнавайте об новых акциях</h2>
@@ -598,8 +608,8 @@
 </div>
                 
             </section>
-        </div>
-        <div class="container">
+        <!-- </div> -->
+        <div class="container foot">
             <footer class="footer">
     <div class="footer__main">
         <a href="#" class="footer__logo">
@@ -747,6 +757,7 @@
     </div>
 </footer>
         </div>
+            
 
         <div class="popup" id="login" aria-hidden="true">
 
@@ -793,7 +804,7 @@
       </div>
     </div>
   </div>
-            <div class="popup" id="signin" aria-hidden="true">
+        <div class="popup" id="signin" aria-hidden="true">
 
     <div class="popup__layer" tabindex="-1" data-micromodal-close>
   
@@ -833,6 +844,33 @@
           <div class="popup__auth_ex">
             Есть аккаунт? <button data-micromodal-trigger="login" data-micromodal-close="signin">Войти →</button>
           </div>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+        <div class="popup" id="city" aria-hidden="true">
+
+    <div class="popup__layer" tabindex="-1" data-micromodal-close>
+  
+      <!-- [3] -->
+      <div role="dialog" aria-modal="true" >
+        
+        <div class="popup__city">
+          <h2 class="popup__city_title">
+            Выберите город
+          </h2>
+          <form class="popup__city_form">
+            <div class="popup__city_search">
+              <select class="popup__city_search_select">
+                <option value="Москва">Москва</option>
+                <option value="Санкт-Петербург">Санкт-Петербург</option>
+                <option value="Екатеринбург">Екатеринбург</option>
+              </select>
+            </div>
+            <button class="popup__city_btn">Сохранить</button>
+          </form>
+          
         </div>
   
       </div>

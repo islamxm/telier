@@ -17,9 +17,9 @@
                 <header class="header">
     <div class="header__top">
         <div class="header__top_contacts">
-            <a href="#" class="geo">
+            <button class="geo" data-micromodal-trigger="city">
                 Москва
-            </a>
+            </button>
             <a href="tel:+79223543232" class="tel">+7 (922) 354 32 32</a>
         </div>
         <ul class="header__top_nav">
@@ -65,7 +65,7 @@
         </button>
         </div>
         <div class="header__main_search">
-            <div class="header__main_search_drop dropdown">
+            <!-- <div class="header__main_search_drop dropdown">
                 <div class="header__main_search_drop_head dropdown_head" data-drophead>
                     Везде
                     <svg data-drophead width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -78,7 +78,16 @@
                     <div class="header__main_search_drop_item dropdown_item" data-droplistitem>Категория 2</div>
                     <div class="header__main_search_drop_item dropdown_item" data-droplistitem>Категория 3</div>
                 </div>
+            </div> -->
+            <div class="header__main_search_filter">
+                <select class="header__main_search_filter_select">
+                    <option value="Все">Везде</option>
+                    <option value="Категории">Категории</option>
+                    <option value="Товары">Товары</option>
+                </select>
             </div>
+            
+
             <input class="header__main_search_input" type="text" placeholder="Поиск по товарам">
             <button class="header__main_search_btn">
                 <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -88,6 +97,7 @@
             </button>
         </div>
         <div class="header__main_btns">
+            
             <a href="#" class="main_btn basket">
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1.41631 1.33333L2.5054 8.41248C2.51333 8.47091 2.52991 8.5266 2.55381 8.5782C2.62575 8.73353 2.76401 8.85188 2.93226 8.8969C2.98366 8.91071 3.03752 8.91761 3.09262 8.91667H9.50008C9.75769 8.91667 9.98479 8.7477 10.0588 8.50095L11.8088 2.66762C11.8618 2.491 11.8282 2.29973 11.7181 2.15179C11.608 2.00385 11.4345 1.91667 11.2501 1.91667H2.68644L2.49459 0.669613C2.4874 0.617473 2.47332 0.567533 2.4533 0.52074C2.41697 0.435529 2.36132 0.361718 2.29259 0.303863C2.22881 0.250085 2.15335 0.209732 2.07056 0.187159C2.01844 0.172888 1.96377 0.16574 1.90782 0.166668H0.750081C0.427915 0.166668 0.166748 0.427835 0.166748 0.750001C0.166748 1.07217 0.427915 1.33333 0.750081 1.33333H1.41631ZM3.58388 7.75L2.86593 3.08333H10.4661L9.06606 7.75H3.58388Z" fill="#242424"/>
@@ -598,7 +608,7 @@
                                                 <div class="person__item">
                                                     <div class="person__item_top">
                                                         <div class="name">Пароль</div>
-                                                        <button class="edit">Изменить</button>
+                                                        <button class="edit" data-micromodal-trigger="pass-edit">Изменить</button>
                                                     </div>
                                                     <div class="person__item_value">
                                                         ••••••••••••••
@@ -614,7 +624,7 @@
                                                 <path data-drophead d="M13.7071 7.70711C13.3166 8.09763 12.6834 8.09763 12.2929 7.70711L7 2.41421L1.70711 7.70711C1.31658 8.09763 0.683417 8.09763 0.292893 7.70711C-0.0976315 7.31658 -0.0976315 6.68342 0.292893 6.29289L6.29289 0.292893C6.68342 -0.0976315 7.31658 -0.0976315 7.70711 0.292893L13.7071 6.29289C14.0976 6.68342 14.0976 7.31658 13.7071 7.70711Z" fill="#3D5165"/>
                                             </svg>
                                             <div class="edit_wr">
-                                                <button>Добавить адрес</button>
+                                                <button data-micromodal-trigger="adress">Добавить адрес</button>
                                             </div>
                                         </div>
                                         <div class="lk__body_drop_content">
@@ -631,7 +641,7 @@
                                                     
                                                 </div>
                                                 <div class="edit_wr">
-                                                    <button>Изменить</button>
+                                                    <button data-micromodal-trigger="adress">Изменить</button>
                                                 </div>
                                             </div>
                                             
@@ -899,6 +909,165 @@
           <div class="popup__auth_ex">
             Есть аккаунт? <button data-micromodal-trigger="login" data-micromodal-close="signin">Войти →</button>
           </div>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+            <div class="popup" id="city" aria-hidden="true">
+
+    <div class="popup__layer" tabindex="-1" data-micromodal-close>
+  
+      <!-- [3] -->
+      <div role="dialog" aria-modal="true" >
+        
+        <div class="popup__city">
+          <h2 class="popup__city_title">
+            Выберите город
+          </h2>
+          <form class="popup__city_form">
+            <div class="popup__city_search">
+              <select class="popup__city_search_select">
+                <option value="Москва">Москва</option>
+                <option value="Санкт-Петербург">Санкт-Петербург</option>
+                <option value="Екатеринбург">Екатеринбург</option>
+              </select>
+            </div>
+            <button class="popup__city_btn">Сохранить</button>
+          </form>
+          
+        </div>
+  
+      </div>
+    </div>
+  </div>
+            <div class="popup" id="deliv" aria-hidden="true">
+
+    <div class="popup__layer" tabindex="-1" data-micromodal-close>
+  
+      <!-- [3] -->
+      <div role="dialog" aria-modal="true" >
+        
+        <div class="popup__deliv">
+
+          <div class="popup__deliv_title">
+            Сохраненные адреса
+          </div>
+
+          
+
+          <div class="popup__deliv_body">
+             <div class="popup__deliv_body_item" data-micromodal-close>
+               Отеделение Почты России №41532643
+обл. Омская, г. Омск, ул. 70 лет Октября, д. 19
+
+             </div> 
+             <div class="popup__deliv_body_item" data-micromodal-close>
+               Отеделение Почты России №41532643
+обл. Омская, г. Омск, ул. 70 лет Октября, д. 19
+
+             </div> 
+             <div class="popup__deliv_body_item" data-micromodal-close>
+               Отеделение Почты России №41532643
+обл. Омская, г. Омск, ул. 70 лет Октября, д. 19
+
+             </div> 
+          </div>
+
+          <button class="popup__deliv_btn" data-micromodal-close data-micromodal-trigger="adress">
+              Выбрать адрес доставки
+          </button>
+
+        </div>
+  
+      </div>
+    </div>
+  </div>
+            <div class="popup" id="adress" aria-hidden="true">
+
+    <div class="popup__layer" tabindex="-1" data-micromodal-close>
+  
+      <!-- [3] -->
+      <div role="dialog" aria-modal="true" >
+        
+        <div class="popup__adress">
+
+          <div class="popup__adress_head">
+            Улица, 1 , 1
+          </div>
+
+          <div class="popup__adress_scdr">Санкт-Петербург, Россия</div>
+
+          <form class="popup__adress_form">
+              <div class="popup__adress_form_main">
+                <div class="popup__adress_form_main_head">
+                  <div class="name">Квартира/Офис</div>
+                  <label>
+                    <input type="checkbox">
+                    Частный дом
+                  </label>
+                </div>
+                <div class="popup__adress_form_main_input">
+                  <input type="text">
+                </div>
+              </div>
+
+              <div class="popup__adress_form_ex">
+                <div class="popup__adress_form_ex_head">
+                  Укажите дополнительную информацию для курьера
+                </div>
+                <div class="popup__adress_form_ex_wr">
+                  <div class="item">
+                    <input type="text" placeholder="Укажите подъезд">
+                  </div>
+                  <div class="item">
+                    <input type="text" placeholder="Домофон">
+                  </div>
+                  <div class="item">
+                    <input type="text" placeholder="Этаж">
+                  </div>
+                </div>
+              </div>
+
+              <div class="popup__adress_form_btn">
+                <button>Выбрать</button>
+              </div>
+          </form>
+
+        </div>
+  
+      </div>
+    </div>
+  </div>
+            <div class="popup" id="pass-edit" aria-hidden="true">
+
+    <div class="popup__layer" tabindex="-1" data-micromodal-close>
+  
+      <!-- [3] -->
+      <div role="dialog" aria-modal="true" >
+        
+        <div class="popup__pass-edit">
+          <h2 class="popup__pass-edit_title">
+            Изменить пароль
+          </h2>
+          <form class="popup__pass-edit_form">
+            <div class="popup__pass-edit_form_item">
+              <label> Старый пароль
+                <input type="password">
+              </label>
+            </div>
+            <div class="popup__pass-edit_form_item">
+              <label> Новый пароль
+                <input type="password">
+              </label>
+            </div>
+            <button class="popup__pass-edit_form_ex" data-micromodal-trigger>Восстановить пароль</button>
+
+            <button class="popup__pass-edit_form_btn">
+              Сохранить
+            </button>
+
+          </form>
         </div>
   
       </div>

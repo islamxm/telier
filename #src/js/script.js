@@ -3,8 +3,38 @@ import * as noUiSlider from 'nouislider';
 import wNumb from 'wnumb';
 import { Fancybox, Carousel, Panzoom } from "@fancyapps/ui";
 import MicroModal from 'micromodal';
+// import Choices from './libs/choices.js';
+
+const Choices = require('./libs/choices.js');
 
 document.addEventListener('DOMContentLoaded', () => {
+
+    const defaultSelect = () => {
+        // Select elements
+        const headerSearchFilter = document.querySelector('.header__main_search_filter_select')
+        const headerCitySearch = document.querySelector('.popup__city_search_select');
+        const reviewsFilter = document.querySelector('.reviews__body_filter_drop_select');
+
+        // Select constructors
+        const headerSearchFilterSelect = new Choices(headerSearchFilter, {
+            searchEnabled: false,
+            itemSelectText: ''
+        })
+
+        const headerCitySearchSelect = new Choices(headerCitySearch, {
+            itemSelectText: ''
+        })
+
+        if(reviewsFilter) {
+                const reviewsFilterSelect = new Choices(reviewsFilter, {
+                searchEnabled: false,
+                itemSelectText: ''
+            })
+        }
+        
+    }
+
+    defaultSelect();
 
     MicroModal.init();
 

@@ -104,7 +104,7 @@
                                                 <div class="person__item">
                                                     <div class="person__item_top">
                                                         <div class="name">Пароль</div>
-                                                        <button class="edit">Изменить</button>
+                                                        <button class="edit" data-micromodal-trigger="pass-edit">Изменить</button>
                                                     </div>
                                                     <div class="person__item_value">
                                                         ••••••••••••••
@@ -120,7 +120,7 @@
                                                 <path data-drophead d="M13.7071 7.70711C13.3166 8.09763 12.6834 8.09763 12.2929 7.70711L7 2.41421L1.70711 7.70711C1.31658 8.09763 0.683417 8.09763 0.292893 7.70711C-0.0976315 7.31658 -0.0976315 6.68342 0.292893 6.29289L6.29289 0.292893C6.68342 -0.0976315 7.31658 -0.0976315 7.70711 0.292893L13.7071 6.29289C14.0976 6.68342 14.0976 7.31658 13.7071 7.70711Z" fill="#3D5165"/>
                                             </svg>
                                             <div class="edit_wr">
-                                                <button>Добавить адрес</button>
+                                                <button data-micromodal-trigger="adress">Добавить адрес</button>
                                             </div>
                                         </div>
                                         <div class="lk__body_drop_content">
@@ -137,7 +137,7 @@
                                                     
                                                 </div>
                                                 <div class="edit_wr">
-                                                    <button>Изменить</button>
+                                                    <button data-micromodal-trigger="adress">Изменить</button>
                                                 </div>
                                             </div>
                                             
@@ -177,6 +177,10 @@
 
             @@include('./popups/login.html')
             @@include('./popups/signin.html')
+            @@include('./popups/city.html')
+            @@include('./popups/deliv.html')
+            @@include('./popups/adress.html')
+            @@include('./popups/pass-edit.html')
             <script src="./js/bundle.js"></script>
         </body>
     </html>
