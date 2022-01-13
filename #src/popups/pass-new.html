@@ -1,4 +1,4 @@
-<div class="popup" id="pass-edit" aria-hidden="true">
+<div class="popup" id="pass-new" aria-hidden="true">
 
     <div class="popup__layer" tabindex="-1" data-micromodal-close>
   
@@ -7,20 +7,19 @@
         
         <div class="popup__pass-edit">
           <h2 class="popup__pass-edit_title">
-            Изменить пароль
+            Новый пароль
           </h2>
           <form class="popup__pass-edit_form">
             <div class="popup__pass-edit_form_item">
-              <label> Старый пароль
-                <input type="password">
+              <label> Новый пароль
+                <input required type="password">
               </label>
             </div>
             <div class="popup__pass-edit_form_item">
-              <label> Новый пароль
-                <input type="password">
+              <label> Подтвердить пароль
+                <input required type="password">
               </label>
             </div>
-            <button type="button" class="popup__pass-edit_form_ex" id="backpassButton">Восстановить пароль</button>
 
             <button class="popup__pass-edit_form_btn">
               Сохранить

@@ -566,9 +566,10 @@
             margin-bottom: 20px;
             .choices {
                 &__inner {
-                        background-color: #EFF3F6 !important;
-                        border: none;
-                        color: #3D5165;
+                    background-color: #EFF3F6 !important;
+                    border: none;
+                    color: #3D5165;
+
                     }
                     .choices__list {
                         top: 120%;
@@ -696,6 +697,12 @@
                     margin-bottom: 12px;
                 }
             }
+        }
+
+        &__adress {
+            max-width: 400px;
+            padding: 20px;
+            width: 100%;
         }
     }
 }

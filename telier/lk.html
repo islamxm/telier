@@ -862,7 +862,7 @@
           </form>
 
           <div class="popup__auth_ex">
-            Нет аккаунта? <button data-micromodal-trigger='signin' data-micromodal-close="login">Зарегистрироваться →</button>
+            Нет аккаунта? <button id="regButton">Зарегистрироваться →</button>
           </div>
         </div>
   
@@ -907,7 +907,7 @@
           </form>
 
           <div class="popup__auth_ex">
-            Есть аккаунт? <button data-micromodal-trigger="login" data-micromodal-close="signin">Войти →</button>
+            Есть аккаунт? <button id="logButton">Войти →</button>
           </div>
         </div>
   
@@ -1061,7 +1061,68 @@
                 <input type="password">
               </label>
             </div>
-            <button class="popup__pass-edit_form_ex" data-micromodal-trigger>Восстановить пароль</button>
+            <button type="button" class="popup__pass-edit_form_ex" id="backpassButton">Восстановить пароль</button>
+
+            <button class="popup__pass-edit_form_btn">
+              Сохранить
+            </button>
+
+          </form>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+            <div class="popup" id="pass-reset" aria-hidden="true">
+
+    <div class="popup__layer" tabindex="-1" data-micromodal-close>
+  
+      <!-- [3] -->
+      <div role="dialog" aria-modal="true" >
+        
+        <div class="popup__pass-edit">
+          <h2 class="popup__pass-edit_title">
+            Восстановить пароль
+          </h2>
+          <form class="popup__pass-edit_form">
+            <div class="popup__pass-edit_form_item">
+              <label> Ваша электронная почта
+                <input type="text">
+              </label>
+            </div>
+
+            <button class="popup__pass-edit_form_btn">
+              Отправить код
+            </button>
+
+          </form>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+            <div class="popup" id="pass-new" aria-hidden="true">
+
+    <div class="popup__layer" tabindex="-1" data-micromodal-close>
+  
+      <!-- [3] -->
+      <div role="dialog" aria-modal="true" >
+        
+        <div class="popup__pass-edit">
+          <h2 class="popup__pass-edit_title">
+            Новый пароль
+          </h2>
+          <form class="popup__pass-edit_form">
+            <div class="popup__pass-edit_form_item">
+              <label> Новый пароль
+                <input required type="password">
+              </label>
+            </div>
+            <div class="popup__pass-edit_form_item">
+              <label> Подтвердить пароль
+                <input required type="password">
+              </label>
+            </div>
 
             <button class="popup__pass-edit_form_btn">
               Сохранить

@@ -18,11 +18,13 @@ document.addEventListener('DOMContentLoaded', () => {
         // Select constructors
         const headerSearchFilterSelect = new Choices(headerSearchFilter, {
             searchEnabled: false,
-            itemSelectText: ''
+            itemSelectText: '',
+            allowHTML: true
         })
 
         const headerCitySearchSelect = new Choices(headerCitySearch, {
-            itemSelectText: ''
+            itemSelectText: '',
+            allowHTML: true
         })
 
         if(reviewsFilter) {
@@ -37,6 +39,26 @@ document.addEventListener('DOMContentLoaded', () => {
     defaultSelect();
 
     MicroModal.init();
+
+    const regButton = document.querySelector('#regButton');
+    regButton.addEventListener('click', () => {
+        MicroModal.close('login');
+        MicroModal.show('signin');
+    })
+
+    const backpassButton = document.querySelector('#backpassButton');
+    if(backpassButton) {
+        backpassButton.addEventListener('click', () => {
+            MicroModal.close('pass-edit');
+            MicroModal.show('pass-reset');
+        })
+    }
+
+    const logButton = document.querySelector('#logButton');
+    logButton.addEventListener('click', () => {
+        MicroModal.close('signin');
+        MicroModal.show('login');
+    })
 
     const tabs = document.querySelectorAll('.header__menu_aside_item');
     const tabsCotent = document.querySelectorAll('.header__menu_body');
@@ -58,6 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
             delay: 5000,
 
         },
+        allowTouchMove: true,
         loop: true,
         speed: 1000,
         spaceBetween: 36,

@@ -87,6 +87,10 @@
 
             &__main {
                 width: 100%;
+
+                .path {
+                    display: none;
+                }
                 &_content_wrapper {
 
                     .arts__content {

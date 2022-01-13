@@ -1702,6 +1702,10 @@ html {
     white-space: nowrap;
   }
 }
+.choices__inner {
+  border-radius: 6px !important;
+}
+
 @font-face {
   font-family: "Gilroy";
   src: url("../fonts/Gilroy-ExtraBold.eot");
@@ -1962,14 +1966,14 @@ html {
   position: absolute;
   top: 10px;
   right: 10px;
-  width: 16px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   display: none;
   cursor: pointer;
 }
 .product .product_func .func_open {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -3530,6 +3534,11 @@ html {
   }
   .popup__review_form .item {
     margin-bottom: 12px;
+  }
+  .popup__adress {
+    max-width: 400px;
+    padding: 20px;
+    width: 100%;
   }
 }
 .header {
@@ -6576,6 +6585,9 @@ html {
 }
 #arts .main__content .arts__main {
   width: 100%;
+}
+#arts .main__content .arts__main .path {
+  display: none;
 }
 #arts .main__content .arts__main_content_wrapper .arts__content {
   margin-bottom: 27px;
