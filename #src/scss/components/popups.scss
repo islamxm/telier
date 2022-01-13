@@ -358,10 +358,10 @@
     }
 
     &__adress {
-        width: 450px;
-        background-color: #fff;
-        border-radius: 16px;
-        padding: 45px 40px;
+        // width: 450px;
+        // background-color: #fff;
+        // border-radius: 16px;
+        // padding: 45px 40px;
 
         &_head {
             font-weight: 700;
@@ -371,15 +371,29 @@
             margin-bottom: 25px;
         }
 
+        &_head.dsbl {
+            color: #ccc;
+        }
+
         &_scdr {
             font-size: 20px;
             line-height: 24px;
             font-weight: 500;
             margin-bottom: 20px;
+            color: #3D5165;
+        }
+
+        &_scdr.dsbl {
+            color: #ccc;
         }
 
         &_form {
 
+            input {
+                &:disabled {
+                    cursor: default;
+                }
+            }
             &_main {
                 margin-bottom: 25px;
                 &_head {
@@ -393,6 +407,8 @@
 
                     }
                 }
+
+                
 
                 &_input {
                     width: 100%;
@@ -447,8 +463,15 @@
                         background-color: var(--orange);
                     }
 
+                    &:disabled {
+                        background-color: #ccc;
+                        cursor: default;
+                    }
+
                 }
             }
+
+            
         }
     }
 
@@ -700,9 +723,9 @@
         }
 
         &__adress {
-            max-width: 400px;
-            padding: 20px;
-            width: 100%;
+            // max-width: 400px;
+            // padding: 20px;
+            // width: 100%;
         }
     }
 }

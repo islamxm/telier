@@ -624,7 +624,7 @@
                                                 <path data-drophead d="M13.7071 7.70711C13.3166 8.09763 12.6834 8.09763 12.2929 7.70711L7 2.41421L1.70711 7.70711C1.31658 8.09763 0.683417 8.09763 0.292893 7.70711C-0.0976315 7.31658 -0.0976315 6.68342 0.292893 6.29289L6.29289 0.292893C6.68342 -0.0976315 7.31658 -0.0976315 7.70711 0.292893L13.7071 6.29289C14.0976 6.68342 14.0976 7.31658 13.7071 7.70711Z" fill="#3D5165"/>
                                             </svg>
                                             <div class="edit_wr">
-                                                <button data-micromodal-trigger="adress">Добавить адрес</button>
+                                                <button data-micromodal-trigger="map-p">Добавить адрес</button>
                                             </div>
                                         </div>
                                         <div class="lk__body_drop_content">
@@ -1134,6 +1134,85 @@
       </div>
     </div>
   </div>
+            <div class="popup" id="map-p" aria-hidden="true">
+
+    <div class="popup__layer" tabindex="-1" data-micromodal-close>
+  
+      <!-- [3] -->
+      <div role="dialog" aria-modal="true" >
+        
+        <div class="map">
+            <h2 class="map__head">
+                Введите адресс
+            </h2>
+            <form class="map__form">
+                <div class="map__form_search">
+                    <input required class="map__form_search_input" type="text" id="suggest">
+                    <button type="button" class="map__form_search_btn" type="submit" id="button">Проверить</button>
+                </div>
+                <p class="map__form_notice" id="notice">Адрес не найден</p>
+                <div class="map__form_map" id="map">
+
+                </div>
+            </form>
+
+            <div class="popup__adress">
+
+                <div id="street-point" class="popup__adress_head dsbl">
+                  Улица
+                </div>
+      
+                <div class="popup__adress_scdr dsbl"><span id="city-point">Город</span>, <span id="country-point">Страна</span></div>
+      
+                <form id="mapForm" class="popup__adress_form">
+                    <div class="popup__adress_form_main">
+                      <div class="popup__adress_form_main_head">
+                        <div class="name">Квартира/Офис</div>
+                        <label>
+                          <input disabled type="checkbox" class="mapInput">
+                          Частный дом
+                        </label>
+                      </div>
+                      <div class="popup__adress_form_main_input">
+                        <input disabled required type="text" class="mapInput">
+                      </div>
+                    </div>
+      
+                    <div class="popup__adress_form_ex">
+                      <div class="popup__adress_form_ex_head">
+                        Укажите дополнительную информацию для курьера
+                      </div>
+                      <div class="popup__adress_form_ex_wr">
+                        <div class="item">
+                          <input disabled required type="text" placeholder="Укажите подъезд" class="mapInput">
+                        </div>
+                        <div class="item">
+                          <input disabled required type="text" placeholder="Домофон" class="mapInput">
+                        </div>
+                        <div class="item">
+                          <input disabled required type="text" placeholder="Этаж" class="mapInput">
+                        </div>
+                      </div>
+                    </div>
+      
+                    <div class="popup__adress_form_btn">
+                      <button disabled>Выбрать</button>
+                    </div>
+                </form>
+      
+              </div>
+        </div>
+
+        
+  
+      </div>
+    </div>
+  </div>
+
+
+
+            <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=2026287c-0c43-4518-8bf4-eabcdec6536a" type="text/javascript"></script>
+            <script src="https://yandex.st/jquery/2.2.3/jquery.min.js" type="text/javascript"></script>
             <script src="./js/bundle.js"></script>
         </body>
     </html>
