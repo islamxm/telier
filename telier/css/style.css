@@ -3260,6 +3260,12 @@ html {
 .popup__personal_form_btn:hover {
   background-color: var(--orange);
 }
+.popup__adress {
+  width: 450px;
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 45px 40px;
+}
 .popup__adress_head {
   font-weight: 700;
   color: #3D5165;
@@ -3553,6 +3559,12 @@ html {
   width: 500px;
   max-height: 100%;
 }
+.map .popup__adress {
+  width: 100%;
+  background-color: #fff;
+  border-radius: none;
+  padding: 0;
+}
 .map__head {
   font-weight: 700;
   font-size: 25px;
@@ -3610,6 +3622,7 @@ html {
   font-weight: 600;
   color: #eee;
   font-size: 25px;
+  display: none;
   margin-bottom: 15px;
 }
 

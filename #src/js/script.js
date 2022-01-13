@@ -691,9 +691,10 @@ document.addEventListener('DOMContentLoaded', () => {
     
         function showMessage(message) {
             // $('.popup__adress_head').classList.remove('dsbl');
+            $('#map').css('display', 'block');
             $('#street-point').text(`${message.getThoroughfare()}, ${message.getPremiseNumber()}`);
             $('#city-point').text(message.getAdministrativeAreas());
-            $('#country-point').text(message.getCountry())
+            $('#country-point').text(message.getCountry());
 
             $('#street-point').removeClass('dsbl');
             $('.popup__adress_scdr').removeClass('dsbl');
@@ -710,6 +711,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
         function errorState() {
+            $('#map').css('display', 'none');
             $('#street-point').text('Улица');
             $('#city-point').text('Город');
             $('#country-point').text('Страна');

@@ -4,6 +4,14 @@
     padding: 20px 40px;
     width: 500px;
     max-height: 100%;
+    
+
+    .popup__adress {
+        width: 100%;
+        background-color: #fff;
+        border-radius: none;
+        padding: 0;
+    }
 
     &__head {
         font-weight: 700;
@@ -63,7 +71,7 @@
             font-weight: 600;
             color: #eee;
             font-size: 25px;
-
+            display: none;
             margin-bottom: 15px;
         }
     }
