@@ -1,8 +1,9 @@
 .map {
     background-color: #fff;
     border-radius: 16px;
-    padding: 45px 40px;
+    padding: 20px 40px;
     width: 500px;
+    max-height: 100%;
 
     &__head {
         font-weight: 700;
@@ -64,6 +65,45 @@
             font-size: 25px;
 
             margin-bottom: 15px;
+        }
+    }
+}
+
+@media (max-height: 772px) {
+
+    .map {
+        
+        &__head {
+            margin-bottom: 10px;
+        }
+
+        &__form {
+
+            &_map {
+                height: 150px;
+                margin-bottom: 10px;
+            }
+        }
+
+        .popup__adress {
+
+            &_head {
+                margin-bottom: 10px;
+            }
+
+            &_scdr {
+                margin-bottom: 10px;
+            }
+
+            &_form {
+
+                &_main {
+                    margin-bottom: 10px;
+                }
+                &_ex {
+                    margin-bottom: 10px;
+                }
+            }
         }
     }
 }

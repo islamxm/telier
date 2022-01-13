@@ -3549,8 +3549,9 @@ html {
 .map {
   background-color: #fff;
   border-radius: 16px;
-  padding: 45px 40px;
+  padding: 20px 40px;
   width: 500px;
+  max-height: 100%;
 }
 .map__head {
   font-weight: 700;
@@ -3612,6 +3613,27 @@ html {
   margin-bottom: 15px;
 }
 
+@media (max-height: 772px) {
+  .map__head {
+    margin-bottom: 10px;
+  }
+  .map__form_map {
+    height: 150px;
+    margin-bottom: 10px;
+  }
+  .map .popup__adress_head {
+    margin-bottom: 10px;
+  }
+  .map .popup__adress_scdr {
+    margin-bottom: 10px;
+  }
+  .map .popup__adress_form_main {
+    margin-bottom: 10px;
+  }
+  .map .popup__adress_form_ex {
+    margin-bottom: 10px;
+  }
+}
 .header {
   position: relative;
 }
