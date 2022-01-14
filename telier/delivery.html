@@ -559,7 +559,7 @@
                                                 <path data-drophead d="M13.7071 7.70711C13.3166 8.09763 12.6834 8.09763 12.2929 7.70711L7 2.41421L1.70711 7.70711C1.31658 8.09763 0.683417 8.09763 0.292893 7.70711C-0.0976315 7.31658 -0.0976315 6.68342 0.292893 6.29289L6.29289 0.292893C6.68342 -0.0976315 7.31658 -0.0976315 7.70711 0.292893L13.7071 6.29289C14.0976 6.68342 14.0976 7.31658 13.7071 7.70711Z" fill="#3D5165"/>
                                             </svg>
                                             <div class="edit_wr">
-                                                <button>Добавить адрес</button>
+                                                <button data-micromodal-trigger="map-p">Добавить адрес</button>
                                             </div>
                                         </div>
                                         <div class="lk__body_drop_content">
@@ -575,7 +575,7 @@
                                                     обл. Омская, г. Омск, ул. 70 лет Октября, д. 19
                                                 </div>
                                                 <div class="edit_wr">
-                                                    <button>Изменить</button>
+                                                    <button data-micromodal-trigger="map-p">Изменить</button>
                                                 </div>
                                             </div>
                                             
@@ -1114,12 +1114,12 @@
         <div class="map">
             <div class="map_wr">
                 <h2 class="map__head">
-                    Введите адресс
+                    Введите адрес
                 </h2>
                 <form class="map__form">
                     <div class="map__form_search">
                         <input required class="map__form_search_input" type="text" id="suggest">
-                        <button type="button" class="map__form_search_btn" type="submit" id="button">Проверить</button>
+                        <button type="button" class="map__form_search_btn" type="submit" id="button">Найти</button>
                     </div>
                     <p class="map__form_notice" id="notice">Адрес не найден</p>
                     <div class="map__form_map" id="map">
