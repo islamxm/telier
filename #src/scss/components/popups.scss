@@ -561,15 +561,42 @@
                 }
             }
 
-            .item.stars {
+            .item__stars {
+                display:inline-flex;
+                flex-direction: row-reverse;
+                // label {
 
-                label {
+                //     input {
+                //         width: unset;
+                //     }
+                // }
 
-                    input {
-                        width: unset;
+                &_el {
+                    font-size: 25px;
+                    @include ease-02;
+                    cursor: pointer;
+                    color: #ccc;
+
+                    &:hover {
+                        color: var(--btn_hover);
+                    }
+
+                    &:hover ~ .item__stars_el {
+                        color: var(--btn_hover);
                     }
                 }
+
+                
             }
+
+            .item__stars[data-total-value="1"] .item__stars_el:nth-child(n + 5),
+            .item__stars[data-total-value="2"] .item__stars_el:nth-child(n + 4),
+            .item__stars[data-total-value="3"] .item__stars_el:nth-child(n + 3),
+            .item__stars[data-total-value="4"] .item__stars_el:nth-child(n + 2),
+            .item__stars[data-total-value="5"] .item__stars_el:nth-child(n + 1) {
+                color: var(--btn);
+            }   
+            
         }
     }
 

@@ -571,8 +571,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // Ymaps
-
-    ymaps.ready(init);
+    if(ymaps) {
+        ymaps.ready(init);
+    }
+    
 
     function init() {
         // Подключаем поисковые подсказки к полю ввода.
@@ -732,9 +734,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
         }
 
-        // function replaceForm() {
+    }
 
-        // }
+
+
+    // Rating
+    let revStars = document.querySelectorAll('.item__stars_el');
+
+    if(revStars) {
+        revStars.forEach(item => {
+            item.addEventListener('click', () => {
+                const { itemValue } = item.dataset;
+                item.parentNode.dataset.totalValue = itemValue;
+            })
+        })
     }
 
 

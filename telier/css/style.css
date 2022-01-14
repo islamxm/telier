@@ -3424,8 +3424,35 @@ html {
 .popup__review_form .item button:hover {
   background-color: var(--orange);
 }
-.popup__review_form .item.stars label input {
-  width: unset;
+.popup__review_form .item__stars {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+.popup__review_form .item__stars_el {
+  font-size: 25px;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  color: #ccc;
+}
+.popup__review_form .item__stars_el:hover {
+  color: var(--btn_hover);
+}
+.popup__review_form .item__stars_el:hover ~ .item__stars_el {
+  color: var(--btn_hover);
+}
+.popup__review_form .item__stars[data-total-value="1"] .item__stars_el:nth-child(n+5),
+.popup__review_form .item__stars[data-total-value="2"] .item__stars_el:nth-child(n+4),
+.popup__review_form .item__stars[data-total-value="3"] .item__stars_el:nth-child(n+3),
+.popup__review_form .item__stars[data-total-value="4"] .item__stars_el:nth-child(n+2),
+.popup__review_form .item__stars[data-total-value="5"] .item__stars_el:nth-child(n+1) {
+  color: var(--btn);
 }
 .popup__city {
   background-color: #fff;

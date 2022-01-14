@@ -289,7 +289,10 @@
     @@include('./popups/personal.html')
     @@include('./popups/adress.html')
     @@include('./popups/city.html')
-    <script src="./js/bundle.js"></script>
+    @@include('./popups/map.html')
+        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=2026287c-0c43-4518-8bf4-eabcdec6536a" type="text/javascript"></script>
+        <script src="https://yandex.st/jquery/2.2.3/jquery.min.js" type="text/javascript"></script>
+        <script src="./js/bundle.js"></script>
 </body>
 
 </html>
