@@ -2537,7 +2537,7 @@ html {
 }
 .range_block .range_wr {
   padding-right: 25px;
-  padding-left: 15px;
+  padding-left: 10px;
   margin-bottom: 18px;
   padding-top: 10px;
 }
@@ -2580,7 +2580,6 @@ html {
   display: -ms-flexbox;
   display: flex;
   gap: 18px;
-  padding-right: 15px;
 }
 .range_block .range_values div {
   width: 50%;
