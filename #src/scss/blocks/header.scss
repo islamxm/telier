@@ -273,12 +273,22 @@
             }
 
             .login {
+                display: inline-flex;
+                align-items: center;
+                position: relative;
+                cursor: pointer;
                 // &:after {
                 //     position: absolute;
                 //     content: url('../img/user.svg');
                 //     top: 0;
                 //     left: 0;
                 // }
+
+                svg {
+                    margin-right: 10px;
+                    width: 17px;
+                    height: 17px;
+                }
             }
         }
 

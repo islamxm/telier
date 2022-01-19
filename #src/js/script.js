@@ -30,7 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if(reviewsFilter) {
                 const reviewsFilterSelect = new Choices(reviewsFilter, {
                 searchEnabled: false,
-                itemSelectText: ''
+                itemSelectText: '',
+                allowHTML: true
             })
         }
         
@@ -59,6 +60,14 @@ document.addEventListener('DOMContentLoaded', () => {
         MicroModal.close('signin');
         MicroModal.show('login');
     })
+
+    const deliveBtn = document.querySelector('#delivBtn');
+    if(deliveBtn) {
+        deliveBtn.addEventListener('click', () => {
+            MicroModal.close('deliv');
+            MicroModal.show('map-p');
+        })
+    }
 
     const tabs = document.querySelectorAll('.header__menu_aside_item');
     const tabsCotent = document.querySelectorAll('.header__menu_body');
