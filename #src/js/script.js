@@ -1,6 +1,5 @@
 import Swiper from './libs/swiper';
 import * as noUiSlider from 'nouislider';
-import wNumb from 'wnumb';
 import { Fancybox, Carousel, Panzoom } from "@fancyapps/ui";
 import MicroModal from 'micromodal';
 // import Choices from './libs/choices.js';
