@@ -112,16 +112,16 @@ function css() {
 
 function images() {
     return src(path.src.img)
-        .pipe(imagemin({
-            interlaced: true,
-            progressive: true,
-            optimizationLevel: 4, // 0 to 7
-            svgoPlugins: [
-                {
-                    removeViewBox: false
-                }
-            ]
-        }))
+        // .pipe(imagemin({
+        //     interlaced: true,
+        //     progressive: true,
+        //     optimizationLevel: 4, // 0 to 7
+        //     svgoPlugins: [
+        //         {
+        //             removeViewBox: false
+        //         }
+        //     ]
+        // }))
         .pipe(dest(path.build.img))
         .pipe(browsersync.stream())
 }
